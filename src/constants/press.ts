@@ -101,7 +101,14 @@ export const pressCoverage: PressItem[] = [
     href: "https://www.g4media.ro/cristian-dan-tanar-antreprenor-in-top-forbes-under-30-europa",
     logo: logoUrl("g4media.ro"),
   },
-  // #5 - Business Insider COVID (75) - dedicated section
+  // #5 - Ziarul Financiar City365 (80) - "Dan Cristian" named first in photo, dedicated article
+  {
+    name: "Ziarul Financiar",
+    description: "City365 — \"Four students from Cluj created an app\" (2015)",
+    href: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260",
+    logo: logoUrl("zf.ro"),
+  },
+  // #6 - Business Insider COVID (75) - dedicated section
   {
     name: "Business Insider",
     description: "\"Sustainable banking startup Yayzy\" — COVID startup resilience story",
@@ -129,7 +136,14 @@ export const pressCoverage: PressItem[] = [
     href: "https://www.gazetanord-vest.ro/2023/03/un-satmarean-se-afla-pe-lista-forbes-a-tinerilor-de-succes-din-europa/",
     logo: logoUrl("gazetanord-vest.ro"),
   },
-  // #9 - Forbes Romania (75) - names "Cristian Dan, co-fondator & CTO"
+  // #9 - Sătmăreanul City365 (75) - full bio: "Dan Cristian (21), from Satu Mare"
+  {
+    name: "Sătmăreanul",
+    description: "City365 — full interview, names \"Dan Cristian, 21, from Satu Mare\" (2015)",
+    href: "https://www.satmareanul.net/2015/03/28/city365-o-aplicatie-dezvoltata-de-o-echipa-de-studenti-din-care-fac-parte-si-doi-satmareni/",
+    logo: logoUrl("satmareanul.net"),
+  },
+  // #10 - Forbes Romania (75) - names "Cristian Dan, co-fondator & CTO"
   {
     name: "Forbes Romania",
     description: "Yayzy expansion to 30+ European countries",
@@ -370,43 +384,29 @@ export const pressCoverage: PressItem[] = [
   },
 
   // =========================================================================
-  // CITY365 — Cristian's first startup (2015) — Early entrepreneurship
+  // CITY365 — Cristian's first startup (2015) — Lower-scored articles
   // =========================================================================
   
-  // #41 - Ziarul Financiar City365 - dedicated article, names "Dan Cristian"
-  {
-    name: "Ziarul Financiar",
-    description: "City365 — \"Four students from Cluj created an app\"",
-    href: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260",
-    logo: logoUrl("zf.ro"),
-  },
-  // #42 - Playtech.ro - Innovation Labs Cluj, City365 = "author's favorite"
+  // Playtech.ro (45) - Innovation Labs Cluj, City365 = "author's favorite"
   {
     name: "Playtech.ro",
-    description: "City365 — Innovation Labs Cluj \"author's favorite\"",
+    description: "City365 — Innovation Labs Cluj \"author's favorite\" (2015)",
     href: "https://playtech.ro/2015/cum-vor-tinerii-din-cluj-sa-faca-tehnologia-mai-utila-acestea-sunt-proiectele-care-ne-ar-ajuta/",
     logo: logoUrl("playtech.ro"),
   },
-  // #43 - Actual de Cluj - Spherik Accelerator coverage
+  // Actual de Cluj (40) - Spherik Accelerator coverage
   {
     name: "Actual de Cluj",
-    description: "City365 — Spherik Accelerator coverage",
+    description: "City365 — Spherik Accelerator coverage (2015)",
     href: "https://actualdecluj.ro/ce-aplicatii-si-idei-de-afaceri-cresc-in-accelerator-de-business-la-cluj/",
     logo: logoUrl("actualdecluj.ro"),
-  },
-  // #44 - Satmareanul - names "Dan Cristian" from Satu Mare
-  {
-    name: "Sătmăreanul",
-    description: "City365 — names \"Dan Cristian, 21, from Satu Mare\"",
-    href: "https://www.satmareanul.net/2015/03/28/city365-o-aplicatie-dezvoltata-de-o-echipa-de-studenti-din-care-fac-parte-si-doi-satmareni/",
-    logo: logoUrl("satmareanul.net"),
   },
 ];
 
 // Press coverage counts:
-// Score 45+: 32 items (16 rows on desktop)
-// Score <45: 12 items (collapsed) — includes 4 City365 articles
-export const PRESS_SCORE_100_COUNT = 32;
+// Score 75+: 34 items (17 rows on desktop) — includes ZF City365 (80), Sătmăreanul (75)
+// Score <75: 10 items (collapsed) — includes Playtech (45), Actual de Cluj (40)
+export const PRESS_SCORE_100_COUNT = 34;
 
 // =============================================================================
 // BACKED BY — Score 100 first, then Score 50

@@ -34,7 +34,7 @@ export default function PressPage() {
         </div>
 
         <SectionTitle>Press Coverage</SectionTitle>
-        <ExpandableGrid initialRows={16}>
+        <ExpandableGrid initialRows={17}>
           {pressCoverage.map((item, idx) => (
             <PressCard key={item.name + idx} item={item} index={idx} />
           ))}
