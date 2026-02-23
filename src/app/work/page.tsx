@@ -6,8 +6,12 @@ import { projects } from "@/constants/projects";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Work | Cristian Dan",
-  description: "Projects and products I've built — from fintech infrastructure to AI systems.",
+  title: "Work",
+  description: "Projects and products I've built — Yayzy (carbon tracking fintech), Open Banking integrations, AI systems. CTO experience with distributed teams.",
+  openGraph: {
+    title: "Work & Projects — Cristian Dan",
+    description: "Projects and products I've built — Yayzy (carbon tracking fintech), Open Banking integrations, AI systems.",
+  },
 };
 
 export default function WorkPage() {

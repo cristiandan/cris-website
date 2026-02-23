@@ -7,8 +7,12 @@ import { awards, pressCoverage, backedBy, reference } from "@/constants/press";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Press | Cristian Dan",
-  description: "Featured in Apple App Store, Forbes 30 Under 30, TechCrunch, BBC, and more.",
+  title: "Press",
+  description: "Featured in TechCrunch, BBC, Forbes 30 Under 30, Business Insider, CNN, Apple App Store, and 50+ publications. Backed by Oxford, LBS, Antler, and IBM.",
+  openGraph: {
+    title: "Press & Media — Cristian Dan",
+    description: "Featured in TechCrunch, BBC, Forbes 30 Under 30, Business Insider, CNN, and 50+ publications.",
+  },
 };
 
 const SectionTitle = ({ children }: { children: React.ReactNode }) => (

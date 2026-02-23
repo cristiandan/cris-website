@@ -6,8 +6,12 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact | Cristian Dan",
-  description: "Get in touch — let's build something together.",
+  title: "Contact",
+  description: "Get in touch with Cristian Dan — available for fintech projects, AI product engineering, and technical leadership roles.",
+  openGraph: {
+    title: "Contact Cristian Dan",
+    description: "Get in touch — available for fintech projects, AI product engineering, and technical leadership roles.",
+  },
 };
 
 const socialLinks = [

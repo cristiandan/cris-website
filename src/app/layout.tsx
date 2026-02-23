@@ -14,19 +14,42 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
   description: siteConfig.description,
+  keywords: [
+    "Cristian Dan",
+    "Fintech Engineer",
+    "AI Engineer",
+    "Forbes 30 Under 30",
+    "Yayzy",
+    "Full Stack Developer",
+    "London",
+    "TypeScript",
+    "Node.js",
+  ],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
+    locale: "en_GB",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
+    creator: "@crs_dan",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
