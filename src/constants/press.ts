@@ -401,6 +401,13 @@ export const pressCoverage: PressItem[] = [
     href: "https://actualdecluj.ro/ce-aplicatii-si-idei-de-afaceri-cresc-in-accelerator-de-business-la-cluj/",
     logo: logoUrl("actualdecluj.ro"),
   },
+  // Forbes Romania City365 (35) - passing mention in Innovation Labs overview
+  {
+    name: "Forbes Romania",
+    description: "City365 — Innovation Labs 2015 overview (passing mention)",
+    href: "https://www.forbes.ro/articles/cele-mai-interesante-proiecte-si-aplicatii-ale-viitorilor-antreprenori-din-ul-romanesc-39761",
+    logo: logoUrl("forbes.com"),
+  },
 ];
 
 // Press coverage counts:
