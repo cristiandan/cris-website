@@ -2,7 +2,7 @@ import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
 import { PressCard } from "@/components/press-card";
-import { awards, pressCoverage, backedBy } from "@/constants/press";
+import { awards, pressCoverage, backedBy, reference } from "@/constants/press";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,6 +42,13 @@ export default function PressPage() {
         <SectionTitle>Backed By</SectionTitle>
         <div className="grid gap-4 px-4 md:grid-cols-2">
           {backedBy.map((item, idx) => (
+            <PressCard key={item.name} item={item} index={idx} />
+          ))}
+        </div>
+
+        <SectionTitle>Reference</SectionTitle>
+        <div className="grid gap-4 px-4 md:grid-cols-2">
+          {reference.map((item, idx) => (
             <PressCard key={item.name} item={item} index={idx} />
           ))}
         </div>
