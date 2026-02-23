@@ -2,8 +2,6 @@ import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
 import { PressCard } from "@/components/press-card";
-import { CollapsibleSection } from "@/components/collapsible-section";
-import { ExpandableGrid } from "@/components/expandable-grid";
 import { awards, pressCoverage, backedBy, reference } from "@/constants/press";
 import { Metadata } from "next";
 
@@ -28,33 +26,32 @@ export default function PressPage() {
         </Subheading>
 
         <SectionTitle>Awards & Recognition</SectionTitle>
-        <ExpandableGrid initialCount={4}>
+        <div className="grid gap-4 px-4 md:grid-cols-2">
           {awards.map((item, idx) => (
             <PressCard key={item.name} item={item} index={idx} />
           ))}
-        </ExpandableGrid>
+        </div>
 
         <SectionTitle>Press Coverage</SectionTitle>
-        <ExpandableGrid initialCount={6}>
+        <div className="grid gap-4 px-4 md:grid-cols-2">
           {pressCoverage.map((item, idx) => (
             <PressCard key={item.name} item={item} index={idx} />
           ))}
-        </ExpandableGrid>
+        </div>
 
         <SectionTitle>Backed By</SectionTitle>
-        <ExpandableGrid initialCount={4}>
+        <div className="grid gap-4 px-4 md:grid-cols-2">
           {backedBy.map((item, idx) => (
             <PressCard key={item.name} item={item} index={idx} />
           ))}
-        </ExpandableGrid>
+        </div>
 
-        <CollapsibleSection title="Reference" count={reference.length}>
-          <div className="grid gap-4 px-4 md:grid-cols-2">
-            {reference.map((item, idx) => (
-              <PressCard key={item.name} item={item} index={idx} />
-            ))}
-          </div>
-        </CollapsibleSection>
+        <SectionTitle>Reference</SectionTitle>
+        <div className="grid gap-4 px-4 md:grid-cols-2">
+          {reference.map((item, idx) => (
+            <PressCard key={item.name} item={item} index={idx} />
+          ))}
+        </div>
       </Container>
     </div>
   );
