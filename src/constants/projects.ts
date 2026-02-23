@@ -29,6 +29,21 @@ export const projects: Project[] = [
     href: "https://apps.apple.com/gb/app/yayzy-carbon-footprint-co2/id1518567565",
   },
   {
+    title: "Stint",
+    role: "CTO",
+    category: "Staffing / Gig Economy",
+    description:
+      "On-demand student workforce platform connecting employers with university students.",
+    problem:
+      "Employers needed flexible student workers; students needed flexible income.",
+    impact: [
+      "Grew platform from MVP to 4,000+ users and 150+ job postings/week",
+      "Built and led team of 6 engineers",
+      "Delivered MVP in under 4 months",
+    ],
+    stack: ["React", "React Native", "Node.js", "Firebase"],
+  },
+  {
     title: "Zebra Fuel",
     role: "Senior Engineer / Mobile Lead",
     category: "On-demand Delivery / Logistics",
@@ -41,6 +56,21 @@ export const projects: Project[] = [
       "Architected dashboard with GraphQL/Relay for real-time fleet visibility",
     ],
     stack: ["React Native", "Redux", "GraphQL", "Relay", "Google Maps API"],
+  },
+  {
+    title: "Risky Business",
+    role: "Product Associate",
+    category: "Venture Capital",
+    description:
+      "Early-stage VC firm — hands-on product work with portfolio startups.",
+    problem:
+      "Early-stage startups needed technical guidance and product strategy.",
+    impact: [
+      "Worked with 15+ startups across product ideation and refinement",
+      "Provided technical guidance to non-technical founders",
+      "Learned product management from experienced entrepreneurs",
+    ],
+    stack: ["Product Strategy", "Technical Advisory", "Startup Operations"],
   },
   {
     title: "City365",

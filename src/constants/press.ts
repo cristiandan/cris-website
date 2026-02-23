@@ -19,6 +19,18 @@ export const press: PressItem[] = [
     logo: "/logos/forbes.svg",
   },
   {
+    name: "Forbes 30 Under 30 Europe",
+    description: "Finance — Class of 2023",
+    href: "https://www.forbes.com/30-under-30/2023/europe/finance",
+    logo: "/logos/forbes.svg",
+  },
+  {
+    name: "PwC Future50",
+    description: "Selected as one of the UK's most innovative startups",
+    href: "https://www.pwc.co.uk/future50",
+    logo: "/logos/pwc.svg",
+  },
+  {
     name: "TechCrunch",
     description: "\"Yayzy app automatically calculates the environmental impact of your spending\"",
     href: "https://techcrunch.com/2020/12/23/yayzy-app-automatically-calculates-the-environmental-impact-of-your-spending/",
@@ -48,6 +60,7 @@ export const press: PressItem[] = [
 export const proofLogos = [
   { name: "Apple", logo: "/logos/apple.svg" },
   { name: "Forbes", logo: "/logos/forbes.svg" },
+  { name: "PwC", logo: "/logos/pwc.svg" },
   { name: "TechCrunch", logo: "/logos/techcrunch.svg" },
   { name: "BBC", logo: "/logos/bbc.svg" },
   { name: "Antler", logo: "/logos/antler.svg" },
