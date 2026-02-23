@@ -6,6 +6,7 @@ import { TechStack } from "@/components/tech-stack";
 import { Principles } from "@/components/principles";
 import { about } from "@/constants/site";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
@@ -26,9 +27,31 @@ export default function AboutPage() {
         </Subheading>
 
         <div className="mt-12 space-y-12 px-4">
-          <AboutNarrative narrative={about.narrative} />
-          <TechStack stack={about.stack} />
-          <Principles principles={about.principles} />
+          {/* Headshot + Narrative */}
+          <div className="flex flex-col gap-8 md:flex-row md:items-start">
+            <div className="flex-shrink-0">
+              <Image
+                src="/images/headshot.jpg"
+                alt="Cristian Dan"
+                width={200}
+                height={200}
+                className="rounded-2xl ring-1 ring-neutral-200/50 shadow-lg dark:ring-neutral-700/50"
+                priority
+              />
+              <p className="mt-2 text-center text-xs text-neutral-500 dark:text-neutral-400">
+                Forbes 30 Under 30
+              </p>
+            </div>
+            <div className="flex-1">
+              <AboutNarrative narrative={about.narrative} />
+            </div>
+          </div>
+
+          {/* Rest of content */}
+          <div className="space-y-12">
+            <TechStack stack={about.stack} />
+            <Principles principles={about.principles} />
+          </div>
         </div>
       </Container>
     </div>
