@@ -368,11 +368,44 @@ export const pressCoverage: PressItem[] = [
     href: "https://www.ecovoice.com.au/green-banking-gains-momentum-to-fight-climate-change-says-globaldata/",
     logo: logoUrl("ecovoice.com.au"),
   },
+
+  // =========================================================================
+  // CITY365 — Cristian's first startup (2015) — Early entrepreneurship
+  // =========================================================================
+  
+  // #41 - Ziarul Financiar City365 - dedicated article, names "Dan Cristian"
+  {
+    name: "Ziarul Financiar",
+    description: "City365 — \"Four students from Cluj created an app\"",
+    href: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260",
+    logo: logoUrl("zf.ro"),
+  },
+  // #42 - Playtech.ro - Innovation Labs Cluj, City365 = "author's favorite"
+  {
+    name: "Playtech.ro",
+    description: "City365 — Innovation Labs Cluj \"author's favorite\"",
+    href: "https://playtech.ro/2015/cum-vor-tinerii-din-cluj-sa-faca-tehnologia-mai-utila-acestea-sunt-proiectele-care-ne-ar-ajuta/",
+    logo: logoUrl("playtech.ro"),
+  },
+  // #43 - Actual de Cluj - Spherik Accelerator coverage
+  {
+    name: "Actual de Cluj",
+    description: "City365 — Spherik Accelerator coverage",
+    href: "https://actualdecluj.ro/ce-aplicatii-si-idei-de-afaceri-cresc-in-accelerator-de-business-la-cluj/",
+    logo: logoUrl("actualdecluj.ro"),
+  },
+  // #44 - Satmareanul - names "Dan Cristian" from Satu Mare
+  {
+    name: "Sătmăreanul",
+    description: "City365 — names \"Dan Cristian, 21, from Satu Mare\"",
+    href: "https://www.satmareanul.net/2015/03/28/city365-o-aplicatie-dezvoltata-de-o-echipa-de-studenti-din-care-fac-parte-si-doi-satmareni/",
+    logo: logoUrl("satmareanul.net"),
+  },
 ];
 
 // Press coverage counts:
 // Score 45+: 32 items (16 rows on desktop)
-// Score <45: 8 items (collapsed)
+// Score <45: 12 items (collapsed) — includes 4 City365 articles
 export const PRESS_SCORE_100_COUNT = 32;
 
 // =============================================================================
