@@ -72,5 +72,6 @@ export const proofLogos = [
   { name: "PwC", logo: logoUrl("pwc.com") },
   { name: "TechCrunch", logo: logoUrl("techcrunch.com") },
   { name: "BBC", logo: logoUrl("bbc.com") },
+  { name: "Product Hunt", logo: logoUrl("producthunt.com") },
   { name: "Antler", logo: logoUrl("antler.co") },
 ];

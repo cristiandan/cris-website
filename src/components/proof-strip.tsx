@@ -23,14 +23,14 @@ export const ProofStrip = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.1 * idx }}
             viewport={{ once: true }}
-            className="grayscale opacity-60 transition-all hover:grayscale-0 hover:opacity-100"
+            className="group grayscale opacity-60 transition-all hover:grayscale-0 hover:opacity-100"
           >
             <Image
               src={item.logo}
               alt={item.name}
               width={100}
               height={32}
-              className="h-6 w-auto md:h-8"
+              className="h-6 w-auto rounded-lg ring-1 ring-neutral-200/50 transition-all duration-300 group-hover:ring-2 group-hover:ring-neutral-400/50 group-hover:shadow-lg dark:ring-neutral-700/50 dark:group-hover:ring-neutral-500/50 md:h-8"
             />
           </motion.div>
         ))}
