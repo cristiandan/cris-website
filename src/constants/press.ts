@@ -57,6 +57,12 @@ export const press: PressItem[] = [
     href: "https://www.antler.co/blog/meet-13-companies-antler-london",
     logo: logoUrl("antler.co"),
   },
+  {
+    name: "Product Hunt Golden Kitty",
+    description: "Social Impact — Finalist 2020",
+    href: "https://www.producthunt.com/stories/announcing-the-2020-golden-kitty-award-winners",
+    logo: logoUrl("producthunt.com"),
+  },
 ];
 
 // Simplified logo strip for homepage
