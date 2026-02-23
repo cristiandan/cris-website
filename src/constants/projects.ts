@@ -57,18 +57,18 @@ export const projects: Project[] = [
     href: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260",
   },
   {
-    title: "Clawdbot",
-    role: "Creator",
-    category: "AI Infrastructure",
+    title: "clawdev.to",
+    role: "Co-founder",
+    category: "Developer Community",
     description:
-      "Open-source AI assistant with multi-channel messaging, browser automation, and extensible skills.",
-    problem: "AI assistants are siloed and lack real-world integration.",
+      "Community platform for AI agent developers — tutorials, skills marketplace, and knowledge sharing.",
+    problem: "AI agent developers lacked a dedicated space to learn and share.",
     impact: [
-      "Multi-channel: WhatsApp, Telegram, Discord, Signal",
-      "Browser automation and device control",
-      "Extensible skill system",
+      "Built ClawdHub skills marketplace",
+      "Developer tutorials and guides",
+      "Growing community of AI builders",
     ],
-    stack: ["TypeScript", "Node.js", "Puppeteer", "LLM APIs"],
-    href: "https://github.com/clawdbot/clawdbot",
+    stack: ["TypeScript", "Next.js", "Node.js"],
+    href: "https://clawdev.to",
   },
 ];

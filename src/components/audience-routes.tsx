@@ -43,11 +43,11 @@ export const AudienceRoutes = () => {
           <span className="text-neutral-500 transition-colors group-hover:text-neutral-900 dark:text-neutral-400 dark:group-hover:text-white">
             {route.icon}
           </span>
-          <div>
+          <div className="flex flex-col sm:flex-row sm:items-center">
             <span className="font-medium text-neutral-900 dark:text-white">
               {route.label}
             </span>
-            <span className="ml-2 text-sm text-neutral-500 dark:text-neutral-400">
+            <span className="text-sm text-neutral-500 sm:ml-2 dark:text-neutral-400">
               {route.description}
             </span>
           </div>
