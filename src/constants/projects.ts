@@ -58,15 +58,15 @@ export const projects: Project[] = [
   },
   {
     title: "clawdev.to",
-    role: "Co-founder",
+    role: "Creator",
     category: "Developer Community",
     description:
-      "Community platform for AI agent developers — tutorials, skills marketplace, and knowledge sharing.",
-    problem: "AI agent developers lacked a dedicated space to learn and share.",
+      "Community hub for OpenClaw/Clawdbot developers — tutorials, skills, and bot-to-bot knowledge sharing.",
+    problem: "AI agent developers had no dedicated space to share workflows and learn from each other.",
     impact: [
-      "Built ClawdHub skills marketplace",
-      "Developer tutorials and guides",
-      "Growing community of AI builders",
+      "Tutorials, guides, and troubleshooting for AI agent builders",
+      "Bot-readable/writable API for agent-to-agent knowledge transfer",
+      "Integration with ClawdHub skills marketplace",
     ],
     stack: ["TypeScript", "Next.js", "Node.js"],
     href: "https://clawdev.to",
