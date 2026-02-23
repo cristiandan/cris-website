@@ -2,6 +2,7 @@ import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
 import { PressCard } from "@/components/press-card";
+import { ExpandableGrid } from "@/components/expandable-grid";
 import { awards, pressCoverage, backedBy, reference } from "@/constants/press";
 import { Metadata } from "next";
 
@@ -33,11 +34,11 @@ export default function PressPage() {
         </div>
 
         <SectionTitle>Press Coverage</SectionTitle>
-        <div className="grid gap-4 px-4 md:grid-cols-2">
+        <ExpandableGrid initialRows={17}>
           {pressCoverage.map((item, idx) => (
-            <PressCard key={item.name} item={item} index={idx} />
+            <PressCard key={item.name + idx} item={item} index={idx} />
           ))}
-        </div>
+        </ExpandableGrid>
 
         <SectionTitle>Backed By</SectionTitle>
         <div className="grid gap-4 px-4 md:grid-cols-2">

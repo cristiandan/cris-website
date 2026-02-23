@@ -64,11 +64,16 @@ export const awards: PressItem[] = [
 ];
 
 // =============================================================================
-// PRESS COVERAGE — TOP TIER (Dedicated articles, major outlets)
+// PRESS COVERAGE — Score 100 items first, then Score 50
 // =============================================================================
 
+// Count: 33 Score 100 items, then 7 Score 50 items = 40 total
+// initialRows should be 17 to show all 33 Score 100 items (17 rows × 2 cols = 34 slots)
+
 export const pressCoverage: PressItem[] = [
-  // TOP TIER
+  // =========================================================================
+  // SCORE 100 — TOP TIER (5 items)
+  // =========================================================================
   {
     name: "TechCrunch",
     description: "\"Yayzy app automatically calculates the environmental impact of your spending\"",
@@ -99,7 +104,10 @@ export const pressCoverage: PressItem[] = [
     href: "https://www.cnn.com/2021/03/15/tech/evocco-carbon-footprint-app-ireland-spc-intl/index.html",
     logo: logoUrl("cnn.com"),
   },
-  // TIER 1 - Major UK/Global Publications
+
+  // =========================================================================
+  // SCORE 100 — TIER 1: Major publications (7 items)
+  // =========================================================================
   {
     name: "The Independent",
     description: "\"Five financial apps to save the planet\"",
@@ -130,7 +138,16 @@ export const pressCoverage: PressItem[] = [
     href: "https://sifted.eu/articles/fintechs-going-green/",
     logo: logoUrl("sifted.eu"),
   },
-  // TIER 2 - Dedicated Articles & Interviews
+  {
+    name: "Sifted",
+    description: "Antler ESG portfolio example",
+    href: "https://sifted.eu/articles/vc-esg-goals/",
+    logo: logoUrl("sifted.eu"),
+  },
+
+  // =========================================================================
+  // SCORE 100 — TIER 2: Dedicated articles & interviews (10 items)
+  // =========================================================================
   {
     name: "Input (Inverse)",
     description: "Dedicated launch article about Yayzy",
@@ -155,7 +172,12 @@ export const pressCoverage: PressItem[] = [
     href: "https://internationalbanker.com/banking/its-time-for-banks-to-invest-in-deeper-modernisation-to-unlock-competitiveness/",
     logo: logoUrl("internationalbanker.com"),
   },
-  // Romanian Press (about Cristian)
+  {
+    name: "International Banker",
+    description: "Financial services transformation — by IBM executive",
+    href: "https://internationalbanker.com/technology/2024-is-set-to-be-another-transformative-year-for-financial-services/",
+    logo: logoUrl("internationalbanker.com"),
+  },
   {
     name: "Ziarul Financiar",
     description: "\"ZF IT Generation: Cristian Dan, CTO al Yayzy\" — dedicated interview",
@@ -186,7 +208,10 @@ export const pressCoverage: PressItem[] = [
     href: "https://www.forbes.ro/yayzy-a-ajuns-si-in-romania-si-in-alte-30-de-tari-europene-280260",
     logo: logoUrl("forbes.com"),
   },
-  // TIER 3 - Industry Publications
+
+  // =========================================================================
+  // SCORE 100 — TIER 3: Industry publications (12 items)
+  // =========================================================================
   {
     name: "Fintech Times",
     description: "\"London Startup YAYZY Launches Carbon Tracking App\"",
@@ -236,12 +261,81 @@ export const pressCoverage: PressItem[] = [
     logo: logoUrl("uktech.news"),
   },
   {
+    name: "UK Tech News",
+    description: "Antler invests £1.56m in 13 tech companies",
+    href: "https://www.uktech.news/news/antler-invests-156m-in-13-tech-companies-founded-on-its-first-uk-program-wednesday-2pm-20200120",
+    logo: logoUrl("uktech.news"),
+  },
+  {
     name: "Crowdfund Insider",
     description: "\"Yayzy closes Seedrs campaign with £625k+ secured\"",
     href: "https://www.crowdfundinsider.com/2020/10/167799-uk-banking-app-yayzy-to-close-seedrs-campaign-with-more-than-625000-in-funding-secured/",
     logo: logoUrl("crowdfundinsider.com"),
   },
+  {
+    name: "Crowdfund Insider",
+    description: "\"Overfunding: Yayzy surpasses £200k target\"",
+    href: "https://www.crowdfundinsider.com/2020/09/166375-overfunding-sustainable-banking-app-yayzy-quickly-surpasses-200000-funding-target",
+    logo: logoUrl("crowdfundinsider.com"),
+  },
+  {
+    name: "Product Hunt",
+    description: "Featured in Product Hunt newsletter",
+    href: "https://www.producthunt.com/newsletter/6333",
+    logo: logoUrl("producthunt.com"),
+  },
+
+  // =========================================================================
+  // SCORE 50 — Collapsed by default (7 items)
+  // =========================================================================
+  {
+    name: "Startups Magazine",
+    description: "Antler Demo Day — 1 of 13 featured startups",
+    href: "https://startupsmagazine.co.uk/article-antler-demo-day-next-big-wave-tech",
+    logo: logoUrl("startupsmagazine.co.uk"),
+  },
+  {
+    name: "MyBigPlunge",
+    description: "Yayzy app calculates carbon footprint of spending",
+    href: "https://mybigplunge.com/tech-plunge/technology/yayzy-app-calculates-carbon-footprint-of-users-spending/",
+    logo: logoUrl("mybigplunge.com"),
+  },
+  {
+    name: "FT Adviser",
+    description: "Moneyhub pilot — passing mention",
+    href: "https://www.ftadviser.com/your-industry/2022/04/20/moneyhub-to-pilot-automated-financial-planning/",
+    logo: logoUrl("ftadviser.com"),
+  },
+  {
+    name: "Acropolium",
+    description: "Fintech trends — case study mention",
+    href: "https://acropolium.com/blog/top-financial-technology-trends-transforming-fintech/",
+    logo: logoUrl("acropolium.com"),
+  },
+  {
+    name: "TrendHunter",
+    description: "Carbon tracking trend feature",
+    href: "https://www.trendhunter.com/trends/yayzy-app",
+    logo: logoUrl("trendhunter.com"),
+  },
+  {
+    name: "Finextra Blog",
+    description: "Fintechs forging the future of financial services",
+    href: "https://www.finextra.com/blogposting/23431/fintechs-forging-the-future-of-financial-services",
+    logo: logoUrl("finextra.com"),
+  },
+  {
+    name: "EcoVoice Australia",
+    description: "Green banking gains momentum — syndicated coverage",
+    href: "https://www.ecovoice.com.au/green-banking-gains-momentum-to-fight-climate-change-says-globaldata/",
+    logo: logoUrl("ecovoice.com.au"),
+  },
 ];
+
+// Press coverage counts for reference:
+// Score 100: 34 items (rows 1-17 on desktop)
+// Score 50: 7 items (hidden by default)
+export const PRESS_SCORE_100_COUNT = 34;
 
 // =============================================================================
 // BACKED BY — Institutional recognition & partnerships
