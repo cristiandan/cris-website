@@ -8,7 +8,7 @@ export type PressItem = {
   logo: string;
 };
 
-export const press: PressItem[] = [
+export const awards: PressItem[] = [
   {
     name: "Apple App of the Day",
     description: "Yayzy featured globally on the App Store",
@@ -34,6 +34,15 @@ export const press: PressItem[] = [
     logo: logoUrl("pwc.com"),
   },
   {
+    name: "Product Hunt Golden Kitty",
+    description: "Social Impact — Finalist 2020",
+    href: "https://www.producthunt.com/stories/announcing-the-2020-golden-kitty-award-winners",
+    logo: logoUrl("producthunt.com"),
+  },
+];
+
+export const pressCoverage: PressItem[] = [
+  {
     name: "TechCrunch",
     description: "\"Yayzy app automatically calculates the environmental impact of your spending\"",
     href: "https://techcrunch.com/2020/12/23/yayzy-app-automatically-calculates-the-environmental-impact-of-your-spending/",
@@ -45,12 +54,9 @@ export const press: PressItem[] = [
     href: "https://www.youtube.com/watch?v=FlXCRRrPuAs",
     logo: logoUrl("bbc.com"),
   },
-  {
-    name: "UK Government Net Zero",
-    description: "Selected for Net Zero Innovation Programme",
-    href: "https://eu-admin.eventscloud.com/docs/200008108/200179015",
-    logo: logoUrl("gov.uk"),
-  },
+];
+
+export const backedBy: PressItem[] = [
   {
     name: "Antler",
     description: "Backed by leading early-stage VC",
@@ -58,12 +64,15 @@ export const press: PressItem[] = [
     logo: logoUrl("antler.co"),
   },
   {
-    name: "Product Hunt Golden Kitty",
-    description: "Social Impact — Finalist 2020",
-    href: "https://www.producthunt.com/stories/announcing-the-2020-golden-kitty-award-winners",
-    logo: logoUrl("producthunt.com"),
+    name: "UK Government Net Zero",
+    description: "Selected for Net Zero Innovation Programme",
+    href: "https://eu-admin.eventscloud.com/docs/200008108/200179015",
+    logo: logoUrl("gov.uk"),
   },
 ];
+
+// Combined for backwards compatibility
+export const press: PressItem[] = [...awards, ...pressCoverage, ...backedBy];
 
 // Simplified logo strip for homepage
 export const proofLogos = [
