@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
       {
         hostname: "aceternity.com",
       },
+      {
+        hostname: "img.logo.dev",
+      },
     ],
   },
 };
