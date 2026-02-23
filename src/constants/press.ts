@@ -9,7 +9,7 @@ export type PressItem = {
 };
 
 // =============================================================================
-// AWARDS & RECOGNITION
+// AWARDS & RECOGNITION (Score 100)
 // =============================================================================
 
 export const awards: PressItem[] = [
@@ -64,7 +64,7 @@ export const awards: PressItem[] = [
 ];
 
 // =============================================================================
-// PRESS COVERAGE — TOP TIER (Dedicated articles, major outlets)
+// PRESS COVERAGE — Score 100 (All tiers: Top, 1, 2, 3)
 // =============================================================================
 
 export const pressCoverage: PressItem[] = [
@@ -130,6 +130,12 @@ export const pressCoverage: PressItem[] = [
     href: "https://sifted.eu/articles/fintechs-going-green/",
     logo: logoUrl("sifted.eu"),
   },
+  {
+    name: "Sifted",
+    description: "Antler ESG portfolio example",
+    href: "https://sifted.eu/articles/vc-esg-goals/",
+    logo: logoUrl("sifted.eu"),
+  },
   // TIER 2 - Dedicated Articles & Interviews
   {
     name: "Input (Inverse)",
@@ -153,6 +159,12 @@ export const pressCoverage: PressItem[] = [
     name: "International Banker",
     description: "IBM partnership feature — dedicated paragraph",
     href: "https://internationalbanker.com/banking/its-time-for-banks-to-invest-in-deeper-modernisation-to-unlock-competitiveness/",
+    logo: logoUrl("internationalbanker.com"),
+  },
+  {
+    name: "International Banker",
+    description: "Financial services transformation — by IBM executive",
+    href: "https://internationalbanker.com/technology/2024-is-set-to-be-another-transformative-year-for-financial-services/",
     logo: logoUrl("internationalbanker.com"),
   },
   // Romanian Press (about Cristian)
@@ -236,15 +248,33 @@ export const pressCoverage: PressItem[] = [
     logo: logoUrl("uktech.news"),
   },
   {
+    name: "UK Tech News",
+    description: "Antler invests £1.56m in 13 tech companies",
+    href: "https://www.uktech.news/news/antler-invests-156m-in-13-tech-companies-founded-on-its-first-uk-program-wednesday-2pm-20200120",
+    logo: logoUrl("uktech.news"),
+  },
+  {
     name: "Crowdfund Insider",
     description: "\"Yayzy closes Seedrs campaign with £625k+ secured\"",
     href: "https://www.crowdfundinsider.com/2020/10/167799-uk-banking-app-yayzy-to-close-seedrs-campaign-with-more-than-625000-in-funding-secured/",
     logo: logoUrl("crowdfundinsider.com"),
   },
+  {
+    name: "Crowdfund Insider",
+    description: "\"Overfunding: Yayzy surpasses £200k target\"",
+    href: "https://www.crowdfundinsider.com/2020/09/166375-overfunding-sustainable-banking-app-yayzy-quickly-surpasses-200000-funding-target",
+    logo: logoUrl("crowdfundinsider.com"),
+  },
+  {
+    name: "Product Hunt",
+    description: "Featured in Product Hunt newsletter",
+    href: "https://www.producthunt.com/newsletter/6333",
+    logo: logoUrl("producthunt.com"),
+  },
 ];
 
 // =============================================================================
-// BACKED BY — Institutional recognition & partnerships
+// BACKED BY — Score 100
 // =============================================================================
 
 export const backedBy: PressItem[] = [
@@ -287,15 +317,109 @@ export const backedBy: PressItem[] = [
 ];
 
 // =============================================================================
-// REFERENCE — Wikipedia
+// REFERENCE — Score 100 (Wikipedia) + Score 50 (Collapsed)
 // =============================================================================
 
 export const reference: PressItem[] = [
+  // Score 100 - Wikipedia
   {
     name: "Wikipedia",
     description: "Yayzy has a Wikipedia page with 40+ citations",
     href: "https://en.wikipedia.org/wiki/Yayzy",
     logo: logoUrl("wikipedia.org"),
+  },
+  // Score 50 - Backed By
+  {
+    name: "University of Edinburgh",
+    description: "Academic citation in sustainable finance research",
+    href: "https://edinburgh-innovations.ed.ac.uk/news/sustainable-finance",
+    logo: logoUrl("ed.ac.uk"),
+  },
+  {
+    name: "Save Your Wardrobe",
+    description: "B2B partnership for carbon neutrality",
+    href: "https://www.saveyourwardrobe.com/en-gb/blog/joining-hands-with-yayzy-for-carbon-neutrality",
+    logo: logoUrl("saveyourwardrobe.com"),
+  },
+  {
+    name: "10x Banking",
+    description: "Technical integration for ESG banking products",
+    href: "https://www.10xbanking.com/learn/using-10x-and-yayzy-to-build-esg-into-banking-products",
+    logo: logoUrl("10xbanking.com"),
+  },
+  // Score 50 - Press
+  {
+    name: "Startups Magazine",
+    description: "Antler Demo Day — 1 of 13 featured startups",
+    href: "https://startupsmagazine.co.uk/article-antler-demo-day-next-big-wave-tech",
+    logo: logoUrl("startupsmagazine.co.uk"),
+  },
+  {
+    name: "MyBigPlunge",
+    description: "Yayzy app calculates carbon footprint of spending",
+    href: "https://mybigplunge.com/tech-plunge/technology/yayzy-app-calculates-carbon-footprint-of-users-spending/",
+    logo: logoUrl("mybigplunge.com"),
+  },
+  {
+    name: "FT Adviser",
+    description: "Moneyhub pilot — passing mention",
+    href: "https://www.ftadviser.com/your-industry/2022/04/20/moneyhub-to-pilot-automated-financial-planning/",
+    logo: logoUrl("ftadviser.com"),
+  },
+  {
+    name: "Acropolium",
+    description: "Fintech trends — case study mention",
+    href: "https://acropolium.com/blog/top-financial-technology-trends-transforming-fintech/",
+    logo: logoUrl("acropolium.com"),
+  },
+  {
+    name: "TrendHunter",
+    description: "Carbon tracking trend feature",
+    href: "https://www.trendhunter.com/trends/yayzy-app",
+    logo: logoUrl("trendhunter.com"),
+  },
+  {
+    name: "Finextra Blog",
+    description: "Fintechs forging the future of financial services",
+    href: "https://www.finextra.com/blogposting/23431/fintechs-forging-the-future-of-financial-services",
+    logo: logoUrl("finextra.com"),
+  },
+  {
+    name: "EcoVoice Australia",
+    description: "Green banking gains momentum — syndicated coverage",
+    href: "https://www.ecovoice.com.au/green-banking-gains-momentum-to-fight-climate-change-says-globaldata/",
+    logo: logoUrl("ecovoice.com.au"),
+  },
+  // City365 - Cristian's first startup
+  {
+    name: "Ziarul Financiar",
+    description: "City365 — \"Four students from Cluj created an app\"",
+    href: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260",
+    logo: logoUrl("zf.ro"),
+  },
+  {
+    name: "Playtech.ro",
+    description: "Innovation Labs Cluj — City365 \"author's favorite\"",
+    href: "https://playtech.ro/2015/cum-vor-tinerii-din-cluj-sa-faca-tehnologia-mai-utila-acestea-sunt-proiectele-care-ne-ar-ajuta/",
+    logo: logoUrl("playtech.ro"),
+  },
+  {
+    name: "Actual de Cluj",
+    description: "Spherik Accelerator — City365 coverage",
+    href: "https://actualdecluj.ro/ce-aplicatii-si-idei-de-afaceri-cresc-in-accelerator-de-business-la-cluj/",
+    logo: logoUrl("actualdecluj.ro"),
+  },
+  {
+    name: "Satmareanul",
+    description: "City365 — names Cristian Dan from Satu Mare",
+    href: "https://www.satmareanul.net/2015/03/28/city365-o-aplicatie-dezvoltata-de-o-echipa-de-studenti-din-care-fac-parte-si-doi-satmareni/",
+    logo: logoUrl("satmareanul.net"),
+  },
+  {
+    name: "Forbes Romania",
+    description: "City365 — \"Most interesting projects from future entrepreneurs\"",
+    href: "https://www.forbes.ro/articles/cele-mai-interesante-proiecte-si-aplicatii-ale-viitorilor-antreprenori-din-ul-romanesc-39761",
+    logo: logoUrl("forbes.com"),
   },
 ];
 
