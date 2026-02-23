@@ -41,11 +41,11 @@ export default function PressPage() {
         </ExpandableGrid>
 
         <SectionTitle>Backed By</SectionTitle>
-        <div className="grid gap-4 px-4 md:grid-cols-2">
+        <ExpandableGrid initialRows={3}>
           {backedBy.map((item, idx) => (
-            <PressCard key={item.name} item={item} index={idx} />
+            <PressCard key={item.name + idx} item={item} index={idx} />
           ))}
-        </div>
+        </ExpandableGrid>
 
         <SectionTitle>Reference</SectionTitle>
         <div className="grid gap-4 px-4 md:grid-cols-2">

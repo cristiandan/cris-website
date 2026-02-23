@@ -342,6 +342,9 @@ export const PRESS_SCORE_100_COUNT = 34;
 // =============================================================================
 
 export const backedBy: PressItem[] = [
+  // =========================================================================
+  // SCORE 100 — Main partners (6 items)
+  // =========================================================================
   {
     name: "University of Oxford",
     description: "Featured case study — Saïd Business School entrepreneurship program",
@@ -378,7 +381,32 @@ export const backedBy: PressItem[] = [
     href: "https://www.cs.ubbcluj.ro/alatura-te-provocarii-alaturi-de-yayzy-un-start-up-dezvoltat-de-un-absolvent-al-facultatii-de-matematica-si-informatica/",
     logo: logoUrl("ubbcluj.ro"),
   },
+
+  // =========================================================================
+  // SCORE 50 — Collapsed by default (3 items)
+  // =========================================================================
+  {
+    name: "University of Edinburgh",
+    description: "Academic citation in sustainable finance research",
+    href: "https://edinburgh-innovations.ed.ac.uk/news/sustainable-finance",
+    logo: logoUrl("ed.ac.uk"),
+  },
+  {
+    name: "Save Your Wardrobe",
+    description: "B2B partnership for carbon neutrality",
+    href: "https://www.saveyourwardrobe.com/en-gb/blog/joining-hands-with-yayzy-for-carbon-neutrality",
+    logo: logoUrl("saveyourwardrobe.com"),
+  },
+  {
+    name: "10x Banking",
+    description: "Technical integration for ESG banking products",
+    href: "https://www.10xbanking.com/learn/using-10x-and-yayzy-to-build-esg-into-banking-products",
+    logo: logoUrl("10xbanking.com"),
+  },
 ];
+
+// Backed By counts: 6 Score 100, 3 Score 50
+export const BACKED_BY_SCORE_100_COUNT = 6;
 
 // =============================================================================
 // REFERENCE — Wikipedia
