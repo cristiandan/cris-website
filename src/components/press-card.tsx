@@ -24,13 +24,13 @@ export const PressCard = ({
         rel="noopener noreferrer"
         className="group flex items-center gap-4 rounded-xl border border-neutral-200 bg-white p-4 transition-all hover:border-neutral-300 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-700"
       >
-        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-neutral-100 dark:bg-neutral-800">
+        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center">
           <Image
             src={item.logo}
             alt={item.name}
-            width={24}
-            height={24}
-            className="h-6 w-6"
+            width={48}
+            height={48}
+            className="h-10 w-10 object-contain"
           />
         </div>
         <div className="flex-1">
