@@ -3,6 +3,7 @@ import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
 import { PressCard } from "@/components/press-card";
 import { CollapsibleSection } from "@/components/collapsible-section";
+import { ExpandableGrid } from "@/components/expandable-grid";
 import { awards, pressCoverage, backedBy, reference } from "@/constants/press";
 import { Metadata } from "next";
 
@@ -27,25 +28,25 @@ export default function PressPage() {
         </Subheading>
 
         <SectionTitle>Awards & Recognition</SectionTitle>
-        <div className="grid gap-4 px-4 md:grid-cols-2">
+        <ExpandableGrid initialCount={4}>
           {awards.map((item, idx) => (
             <PressCard key={item.name} item={item} index={idx} />
           ))}
-        </div>
+        </ExpandableGrid>
 
         <SectionTitle>Press Coverage</SectionTitle>
-        <div className="grid gap-4 px-4 md:grid-cols-2">
+        <ExpandableGrid initialCount={6}>
           {pressCoverage.map((item, idx) => (
             <PressCard key={item.name} item={item} index={idx} />
           ))}
-        </div>
+        </ExpandableGrid>
 
         <SectionTitle>Backed By</SectionTitle>
-        <div className="grid gap-4 px-4 md:grid-cols-2">
+        <ExpandableGrid initialCount={4}>
           {backedBy.map((item, idx) => (
             <PressCard key={item.name} item={item} index={idx} />
           ))}
-        </div>
+        </ExpandableGrid>
 
         <CollapsibleSection title="Reference" count={reference.length}>
           <div className="grid gap-4 px-4 md:grid-cols-2">
