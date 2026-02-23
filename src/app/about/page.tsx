@@ -38,9 +38,6 @@ export default function AboutPage() {
                 className="rounded-2xl ring-1 ring-neutral-200/50 shadow-lg dark:ring-neutral-700/50"
                 priority
               />
-              <p className="mt-2 text-center text-xs text-neutral-500 dark:text-neutral-400">
-                Forbes 30 Under 30
-              </p>
             </div>
             <div className="flex-1">
               <AboutNarrative narrative={about.narrative} />
