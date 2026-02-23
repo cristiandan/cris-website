@@ -37,7 +37,7 @@ export const about = {
 
 Moved to London to lead mobile/frontend eng at fast-paced startups like Zebra Fuel (logistics) and Stint (workforce), managing teams of 6+.
 
-Co-founded Yayzy to solve a harder data problem. Learned how to raise ($1.5M), hire/manage (team of 7), and ship bank-grade secure infra under pressure.
+Co-founded Yayzy to solve a harder data problem. Learned how to raise ($1.5M), hire/manage (team of 7), and ship bank-grade secure infra under pressure—featured by Apple, Forbes, and TechCrunch along the way.
 
 Now focused on **fintech infrastructure** and **AI product engineering**—building systems that are secure, scalable, and actually ship.`,
   stack: [
