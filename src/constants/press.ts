@@ -13,8 +13,8 @@ export const press: PressItem[] = [
     logo: "/logos/apple.svg",
   },
   {
-    name: "Forbes 30 Under 30",
-    description: "Romania — Technology & Innovation",
+    name: "Forbes 30 Under 30 Romania",
+    description: "Tech & Innovation — Class of 2021",
     href: "https://www.forbes.ro/articles/forbes-30-sub-30-2021-cristian-dan-si-aspiratorul-digital-de-co2-232128",
     logo: "/logos/forbes.svg",
   },
