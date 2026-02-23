@@ -381,38 +381,45 @@ export const PRESS_SCORE_100_COUNT = 32;
 
 export const backedBy: PressItem[] = [
   // =========================================================================
-  // SCORE 100 — Main partners (6 items)
+  // SCORE 60+ — Visible (6 items) — Ordered by methodology score
   // =========================================================================
+  
+  // #1 - Oxford (90) - Elite uni + dedicated case study
   {
     name: "University of Oxford",
     description: "Featured case study — Saïd Business School entrepreneurship program",
     href: "https://enspire.ox.ac.uk/article/startup-case-study-yayzy",
     logo: logoUrl("ox.ac.uk"),
   },
-  {
-    name: "Antler VC",
-    description: "Backed by leading early-stage venture capital",
-    href: "https://www.antler.co/blog/meet-13-companies-antler-london",
-    logo: logoUrl("antler.co"),
-  },
+  // #2 - LBS (75) - Top B-school + incubator portfolio
   {
     name: "London Business School",
     description: "LBS Incubator 2020 — official portfolio company",
     href: "https://foundersbook.eclublbs.com/yayzy/",
     logo: logoUrl("london.edu"),
   },
+  // #3 - Antler (75) - Names "Cristian Dan, CTO" explicitly
+  {
+    name: "Antler VC",
+    description: "Backed by leading early-stage venture capital",
+    href: "https://www.antler.co/blog/meet-13-companies-antler-london",
+    logo: logoUrl("antler.co"),
+  },
+  // #4 - IBM (70) - Major tech partnership
   {
     name: "IBM Cloud",
     description: "Official technology partnership for scalability & security",
     href: "https://www.yayzy.com/blog/yayzy-ibm",
     logo: logoUrl("ibm.com"),
   },
+  // #5 - UK Gov (65) - National programme selection
   {
     name: "UK Government",
     description: "Selected for Net Zero Innovation Programme",
     href: "https://www.gov.uk/government/news/uk-net-zero-innovation-handbook-unveiled",
     logo: logoUrl("gov.uk"),
   },
+  // #6 - Babeș-Bolyai (60) - Cristian's alma mater
   {
     name: "Babeș-Bolyai University",
     description: "Official recognition of Cristian as notable alumnus",
