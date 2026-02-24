@@ -24,7 +24,7 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
 export default function PressPage() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-screen px-4 md:px-8 md:pt-20 md:pb-10">
+      <Container className="min-h-screen px-4 pb-20 md:px-8 md:pt-20 md:pb-10">
         <Heading>Press</Heading>
         <Subheading className="max-w-2xl">
           Publicly verifiable signals — every claim backed by a link.

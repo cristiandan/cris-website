@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-screen px-4 md:px-8 md:pt-20 md:pb-10">
+      <Container className="min-h-screen px-4 pb-20 md:px-8 md:pt-20 md:pb-10">
         <Heading>About</Heading>
         <Subheading className="max-w-2xl">
           From bootstrapping in Romania to building fintech infrastructure in London.

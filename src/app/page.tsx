@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-screen px-4 md:px-8 md:pt-20 md:pb-10">
+      <Container className="min-h-screen px-4 pb-20 md:px-8 md:pt-20 md:pb-10">
         {/* Hero */}
         <Heading>{hero.headline}</Heading>
         <Subheading className="max-w-2xl">{hero.subheadline}</Subheading>

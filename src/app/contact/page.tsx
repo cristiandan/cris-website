@@ -70,7 +70,7 @@ const socialLinks = [
 export default function ContactPage() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-screen px-4 md:px-8 md:pt-20 md:pb-10">
+      <Container className="min-h-screen px-4 pb-20 md:px-8 md:pt-20 md:pb-10">
         <Heading>Contact</Heading>
         <Subheading className="max-w-lg">
           Open to new opportunities. Whether you have a question or want to work together, let's talk.
