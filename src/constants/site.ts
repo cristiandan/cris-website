@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Cristian Dan — Fintech & AI Engineer",
   description:
     "I build fintech infrastructure and AI-enabled products—from zero to production—bringing founder-level ownership with tech-lead execution.",
-  url: "https://cristiandan.com",
+  url: "https://cris-website.netlify.app",
   email: "cristian.dan@live.com",
   social: {
     twitter: "https://x.com/crs_dan",
