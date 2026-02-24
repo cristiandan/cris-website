@@ -1,4 +1,4 @@
-import { getLatestRuns, getStravaStats } from "@/lib/strava";
+import { getLatestRuns, getStravaStats, StravaActivity } from "@/lib/strava";
 import {
   IconRun,
   IconCalendar,
@@ -8,7 +8,7 @@ import {
   IconTrendingUp,
 } from "@tabler/icons-react";
 
-// Goals
+// Goals (hardcoded - Strava API doesn't expose goals)
 const YEARLY_GOAL_KM = 1310;
 const MONTHLY_GOAL_KM = 110;
 
@@ -49,7 +49,14 @@ function ProgressBar({
   );
 }
 
-function formatTime(seconds: number): string {
+function formatTime(input: number | string | undefined): string {
+  if (typeof input === "string") {
+    return input; // Already formatted (from public scraping)
+  }
+  if (typeof input !== "number" || !input) {
+    return "0m";
+  }
+  const seconds = input;
   const hrs = Math.floor(seconds / 3600);
   const mins = Math.floor((seconds % 3600) / 60);
   if (hrs > 0) {
@@ -58,13 +65,31 @@ function formatTime(seconds: number): string {
   return `${mins}m`;
 }
 
-function formatDistance(meters: number): string {
-  const km = meters / 1000;
+function formatDistance(input: number | string | undefined): string {
+  if (typeof input === "string") {
+    // Could be "4.1 km" from public scraping
+    if (input.includes("km")) return input;
+    const km = parseFloat(input) / 1000;
+    return `${km.toFixed(1)} km`;
+  }
+  if (typeof input !== "number" || !input) {
+    return "0 km";
+  }
+  const km = input / 1000;
   return `${km.toFixed(1)} km`;
 }
 
-function formatDate(dateString: string): string {
+function formatDate(dateString: string | undefined): string {
+  if (!dateString) return "";
+  
+  // Handle "Today", "Yesterday", etc. from public scraping
+  if (dateString === "Today" || dateString === "Yesterday" || dateString.includes("ago")) {
+    return dateString;
+  }
+
   const date = new Date(dateString);
+  if (isNaN(date.getTime())) return dateString;
+
   const now = new Date();
   const diffDays = Math.floor(
     (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
@@ -77,6 +102,14 @@ function formatDate(dateString: string): string {
   return date.toLocaleDateString("en-GB", { month: "short", day: "numeric" });
 }
 
+function getActivityDate(run: StravaActivity): string {
+  return run.start_date_local || run.startDateLocal || "";
+}
+
+function getActivityTime(run: StravaActivity): string {
+  return formatTime(run.moving_time || run.movingTime);
+}
+
 export const StravaRuns = async () => {
   const [runs, stats] = await Promise.all([getLatestRuns(), getStravaStats()]);
 
@@ -85,7 +118,6 @@ export const StravaRuns = async () => {
   }
 
   const currentYear = new Date().getFullYear();
-  const currentMonth = new Date().toLocaleString("en-US", { month: "short" });
 
   return (
     <div>
@@ -102,16 +134,23 @@ export const StravaRuns = async () => {
           <ProgressBar
             current={stats.ytdRunDistanceKm}
             goal={YEARLY_GOAL_KM}
-            label={`${currentYear} Running`}
+            label={`${currentYear} Running${stats.source === "public" ? "*" : ""}`}
             icon={IconTarget}
           />
           <ProgressBar
-            current={stats.recentRunDistanceKm}
+            current={stats.monthlyDistanceKm}
             goal={MONTHLY_GOAL_KM}
-            label="Last 4 Weeks"
+            label={stats.source === "api" ? "Last 4 Weeks" : "This Month"}
             icon={IconTrendingUp}
           />
         </div>
+      )}
+
+      {/* Note if using public fallback */}
+      {stats?.source === "public" && (
+        <p className="mt-2 text-xs text-neutral-400 dark:text-neutral-500">
+          * All activities (API unavailable)
+        </p>
       )}
 
       {/* Recent Runs */}
@@ -135,7 +174,7 @@ export const StravaRuns = async () => {
                 <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400">
                   <span className="flex items-center gap-1">
                     <IconCalendar className="h-3 w-3" />
-                    {formatDate(run.start_date_local)}
+                    {formatDate(getActivityDate(run))}
                   </span>
                   <span className="flex items-center gap-1">
                     <IconMapPin className="h-3 w-3" />
@@ -143,7 +182,7 @@ export const StravaRuns = async () => {
                   </span>
                   <span className="flex items-center gap-1">
                     <IconClock className="h-3 w-3" />
-                    {formatTime(run.moving_time)}
+                    {getActivityTime(run)}
                   </span>
                 </div>
               </div>
