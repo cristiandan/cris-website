@@ -90,16 +90,23 @@ function formatDate(dateString: string | undefined): string {
   const date = new Date(dateString);
   if (isNaN(date.getTime())) return dateString;
 
-  const now = new Date();
-  const diffDays = Math.floor(
-    (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
-  );
+  // Compare by calendar date in London timezone, not by timestamp
+  const londonNow = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/London" });
+  const londonDate = date.toLocaleDateString("en-CA", { timeZone: "Europe/London" });
+  
+  // Parse as YYYY-MM-DD strings for accurate day comparison
+  const nowParts = londonNow.split("-").map(Number);
+  const dateParts = londonDate.split("-").map(Number);
+  
+  const nowDays = nowParts[0] * 365 + nowParts[1] * 30 + nowParts[2];
+  const dateDays = dateParts[0] * 365 + dateParts[1] * 30 + dateParts[2];
+  const diffDays = nowDays - dateDays;
 
   if (diffDays === 0) return "Today";
   if (diffDays === 1) return "Yesterday";
   if (diffDays < 7) return `${diffDays} days ago`;
 
-  return date.toLocaleDateString("en-GB", { month: "short", day: "numeric" });
+  return date.toLocaleDateString("en-GB", { month: "short", day: "numeric", timeZone: "Europe/London" });
 }
 
 function getActivityDate(run: StravaActivity): string {
