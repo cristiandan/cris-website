@@ -9,6 +9,9 @@ import { about } from "@/constants/site";
 import { Metadata } from "next";
 import Image from "next/image";
 
+// ISR: revalidate page every hour, CDN caches between revalidations
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "About",
   description: "From bootstrapping City365 in Romania to co-founding Yayzy in London. Forbes 30 Under 30, featured by Apple, TechCrunch, and BBC.",

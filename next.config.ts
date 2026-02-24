@@ -25,6 +25,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        // Durable cache for /about - reduces function invocations
+        source: "/about",
+        headers: [
+          {
+            key: "Netlify-CDN-Cache-Control",
+            value: "public, max-age=3600, stale-while-revalidate=86400, durable",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
