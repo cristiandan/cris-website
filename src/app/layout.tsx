@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og.png",
+        url: "https://cris-website.netlify.app/og.png",
         width: 1200,
         height: 630,
         alt: siteConfig.title,
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     creator: "@crs_dan",
-    images: ["/og.png"],
+    images: ["https://cris-website.netlify.app/og.png"],
   },
   robots: {
     index: true,
