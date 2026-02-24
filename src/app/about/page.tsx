@@ -4,6 +4,7 @@ import { Subheading } from "@/components/subheading";
 import { AboutNarrative } from "@/components/about-narrative";
 import { TechStack } from "@/components/tech-stack";
 import { Principles } from "@/components/principles";
+import { StravaRuns } from "@/components/strava-runs";
 import { about } from "@/constants/site";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -48,6 +49,7 @@ export default function AboutPage() {
           <div className="space-y-12">
             <TechStack stack={about.stack} />
             <Principles principles={about.principles} />
+            <StravaRuns />
           </div>
         </div>
       </Container>
