@@ -4,156 +4,175 @@ export type StravaActivity = {
   id: number;
   name: string;
   type: string;
-  detailedType?: string;
-  startDateLocal: string;
-  distance?: string;
-  elevation?: string;
-  movingTime?: string;
-  images?: { defaultSrc: string }[];
+  sport_type: string;
+  start_date_local: string;
+  distance: number;
+  total_elevation_gain: number;
+  moving_time: number;
 };
 
 export type StravaStats = {
-  monthlyDistanceKm: number;
-  monthlyTime: string;
-  yearToDateKm: number;
-  yearToDateHours: number;
+  ytdRunDistanceKm: number;
+  ytdRunCount: number;
+  ytdRunTimeHours: number;
+  recentRunDistanceKm: number;
+  recentRunCount: number;
 };
 
-type ChartDataPoint = {
-  month: string;
-  miles: number;
-  hours: number;
-  elev_gain: number;
+type TokenResponse = {
+  access_token: string;
+  refresh_token: string;
+  expires_at: number;
 };
 
-type NextData = {
-  props?: {
-    pageProps?: {
-      recentActivities?: unknown;
-      athleteData?: {
-        recentActivities?: unknown;
-        stats?: {
-          monthlyDistance?: string;
-          monthlyTime?: string;
-          chartData?: ChartDataPoint[];
-        };
-      };
-    };
+type AthleteStats = {
+  ytd_run_totals: {
+    count: number;
+    distance: number;
+    moving_time: number;
+    elevation_gain: number;
+  };
+  recent_run_totals: {
+    count: number;
+    distance: number;
+    moving_time: number;
   };
 };
 
-function extractNextDataJson(html: string): string | null {
-  const match = html.match(
-    /<script[^>]*id="__NEXT_DATA__"[^>]*type="application\/json"[^>]*>([\s\S]*?)<\/script>/
-  );
-  return match?.[1] ?? null;
-}
+const STRAVA_CLIENT_ID = process.env.STRAVA_CLIENT_ID;
+const STRAVA_CLIENT_SECRET = process.env.STRAVA_CLIENT_SECRET;
+const STRAVA_REFRESH_TOKEN = process.env.STRAVA_REFRESH_TOKEN;
+const STRAVA_ATHLETE_ID = "50964359";
 
-const MILES_TO_KM = 1.60934;
-
-async function fetchStravaData(): Promise<NextData | null> {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 5000);
+async function getAccessToken(): Promise<string | null> {
+  if (!STRAVA_CLIENT_ID || !STRAVA_CLIENT_SECRET || !STRAVA_REFRESH_TOKEN) {
+    console.error("Strava: Missing environment variables");
+    return null;
+  }
 
   try {
-    const res = await fetch("https://www.strava.com/athletes/50964359", {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      },
-      signal: controller.signal,
+    const res = await fetch("https://www.strava.com/oauth/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        client_id: STRAVA_CLIENT_ID,
+        client_secret: STRAVA_CLIENT_SECRET,
+        refresh_token: STRAVA_REFRESH_TOKEN,
+        grant_type: "refresh_token",
+      }),
     });
 
     if (!res.ok) {
-      console.error("Strava: failed to fetch athlete page:", res.status);
+      console.error("Strava: Failed to refresh token:", res.status);
       return null;
     }
 
-    const html = await res.text();
-    const nextDataJson = extractNextDataJson(html);
-
-    if (!nextDataJson) {
-      console.warn("Strava: __NEXT_DATA__ not found in HTML");
-      return null;
-    }
-
-    return JSON.parse(nextDataJson) as NextData;
+    const data = (await res.json()) as TokenResponse;
+    return data.access_token;
   } catch (error) {
-    console.error("Strava: error fetching/parsing:", error);
+    console.error("Strava: Error refreshing token:", error);
     return null;
-  } finally {
-    clearTimeout(timeout);
   }
 }
 
-export const getLatestRuns = unstable_cache(
-  async (): Promise<StravaActivity[]> => {
-    const nextData = await fetchStravaData();
-    if (!nextData) return [];
+function formatTime(seconds: number): string {
+  const hrs = Math.floor(seconds / 3600);
+  const mins = Math.floor((seconds % 3600) / 60);
+  if (hrs > 0) {
+    return `${hrs}h ${mins}m`;
+  }
+  return `${mins}m`;
+}
 
-    const pageProps = nextData?.props?.pageProps;
-    const recent =
-      pageProps?.athleteData?.recentActivities ?? pageProps?.recentActivities;
+function formatDistance(meters: number): string {
+  const km = meters / 1000;
+  return `${km.toFixed(1)} km`;
+}
 
-    if (!Array.isArray(recent)) {
-      console.warn("Strava: recentActivities missing or not an array");
-      return [];
-    }
-
-    return (recent as any[])
-      .filter((act) => act && act.type === "run")
-      .slice(0, 3)
-      .map((act) => ({
-        id: Number(act.id),
-        name: String(act.name ?? "Run"),
-        type: String(act.type ?? ""),
-        detailedType: act.detailedType ? String(act.detailedType) : undefined,
-        startDateLocal: String(act.startDateLocal ?? ""),
-        distance: act.distance ? String(act.distance) : undefined,
-        elevation: act.elevation ? String(act.elevation) : undefined,
-        movingTime: act.movingTime ? String(act.movingTime) : undefined,
-        images: Array.isArray(act.images) ? act.images : undefined,
-      }));
-  },
-  ["strava-runs"],
-  { revalidate: 3600 }
-);
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+  
+  if (diffDays === 0) return "Today";
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays < 7) return `${diffDays} days ago`;
+  
+  return date.toLocaleDateString("en-GB", { month: "short", day: "numeric" });
+}
 
 export const getStravaStats = unstable_cache(
   async (): Promise<StravaStats | null> => {
-    const nextData = await fetchStravaData();
-    if (!nextData) return null;
+    const accessToken = await getAccessToken();
+    if (!accessToken) return null;
 
-    const pageProps = nextData?.props?.pageProps;
-    const stats = pageProps?.athleteData?.stats;
+    try {
+      const res = await fetch(
+        `https://www.strava.com/api/v3/athletes/${STRAVA_ATHLETE_ID}/stats`,
+        {
+          headers: { Authorization: `Bearer ${accessToken}` },
+        }
+      );
 
-    if (!stats) {
-      console.warn("Strava: stats missing");
+      if (!res.ok) {
+        console.error("Strava: Failed to fetch stats:", res.status);
+        return null;
+      }
+
+      const data = (await res.json()) as AthleteStats;
+
+      return {
+        ytdRunDistanceKm: Math.round(data.ytd_run_totals.distance / 1000 * 10) / 10,
+        ytdRunCount: data.ytd_run_totals.count,
+        ytdRunTimeHours: Math.round(data.ytd_run_totals.moving_time / 3600 * 10) / 10,
+        recentRunDistanceKm: Math.round(data.recent_run_totals.distance / 1000 * 10) / 10,
+        recentRunCount: data.recent_run_totals.count,
+      };
+    } catch (error) {
+      console.error("Strava: Error fetching stats:", error);
       return null;
     }
-
-    // Parse monthly distance (e.g., "66.9 km")
-    const monthlyDistanceKm = parseFloat(stats.monthlyDistance?.replace(/[^\d.]/g, "") ?? "0");
-
-    // Calculate YTD from chart data
-    const currentYear = new Date().getFullYear();
-    const chartData = stats.chartData ?? [];
-    
-    const ytdData = chartData.filter((point) => {
-      const pointYear = new Date(point.month).getFullYear();
-      return pointYear === currentYear;
-    });
-
-    const yearToDateMiles = ytdData.reduce((sum, point) => sum + (point.miles || 0), 0);
-    const yearToDateHours = ytdData.reduce((sum, point) => sum + (point.hours || 0), 0);
-
-    return {
-      monthlyDistanceKm,
-      monthlyTime: stats.monthlyTime ?? "0:00:00",
-      yearToDateKm: Math.round(yearToDateMiles * MILES_TO_KM * 10) / 10,
-      yearToDateHours: Math.round(yearToDateHours * 10) / 10,
-    };
   },
-  ["strava-stats"],
+  ["strava-stats-api"],
+  { revalidate: 3600 }
+);
+
+export const getLatestRuns = unstable_cache(
+  async (): Promise<StravaActivity[]> => {
+    const accessToken = await getAccessToken();
+    if (!accessToken) return [];
+
+    try {
+      const res = await fetch(
+        "https://www.strava.com/api/v3/athlete/activities?per_page=10",
+        {
+          headers: { Authorization: `Bearer ${accessToken}` },
+        }
+      );
+
+      if (!res.ok) {
+        console.error("Strava: Failed to fetch activities:", res.status);
+        return [];
+      }
+
+      const activities = (await res.json()) as StravaActivity[];
+
+      // Filter to runs only and take first 3
+      return activities
+        .filter((act) => act.sport_type === "Run" || act.type === "Run")
+        .slice(0, 3)
+        .map((act) => ({
+          ...act,
+          // Add formatted fields for display
+          distanceFormatted: formatDistance(act.distance),
+          movingTimeFormatted: formatTime(act.moving_time),
+          dateFormatted: formatDate(act.start_date_local),
+        }));
+    } catch (error) {
+      console.error("Strava: Error fetching activities:", error);
+      return [];
+    }
+  },
+  ["strava-runs-api"],
   { revalidate: 3600 }
 );

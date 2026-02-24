@@ -49,6 +49,34 @@ function ProgressBar({
   );
 }
 
+function formatTime(seconds: number): string {
+  const hrs = Math.floor(seconds / 3600);
+  const mins = Math.floor((seconds % 3600) / 60);
+  if (hrs > 0) {
+    return `${hrs}h ${mins}m`;
+  }
+  return `${mins}m`;
+}
+
+function formatDistance(meters: number): string {
+  const km = meters / 1000;
+  return `${km.toFixed(1)} km`;
+}
+
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  const now = new Date();
+  const diffDays = Math.floor(
+    (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
+  );
+
+  if (diffDays === 0) return "Today";
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays < 7) return `${diffDays} days ago`;
+
+  return date.toLocaleDateString("en-GB", { month: "short", day: "numeric" });
+}
+
 export const StravaRuns = async () => {
   const [runs, stats] = await Promise.all([getLatestRuns(), getStravaStats()]);
 
@@ -72,15 +100,15 @@ export const StravaRuns = async () => {
       {stats && (
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <ProgressBar
-            current={stats.yearToDateKm}
+            current={stats.ytdRunDistanceKm}
             goal={YEARLY_GOAL_KM}
-            label={`${currentYear} Goal`}
+            label={`${currentYear} Running`}
             icon={IconTarget}
           />
           <ProgressBar
-            current={stats.monthlyDistanceKm}
+            current={stats.recentRunDistanceKm}
             goal={MONTHLY_GOAL_KM}
-            label={`${currentMonth} Goal`}
+            label="Last 4 Weeks"
             icon={IconTrendingUp}
           />
         </div>
@@ -100,27 +128,23 @@ export const StravaRuns = async () => {
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-100 text-orange-600 dark:bg-orange-900/20 dark:text-orange-500">
                 <IconRun className="h-5 w-5" />
               </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="font-medium text-neutral-900 transition-colors group-hover:text-orange-600 dark:text-white dark:group-hover:text-orange-500 truncate">
+              <div className="min-w-0 flex-1">
+                <h3 className="truncate font-medium text-neutral-900 transition-colors group-hover:text-orange-600 dark:text-white dark:group-hover:text-orange-500">
                   {run.name}
                 </h3>
                 <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400">
                   <span className="flex items-center gap-1">
                     <IconCalendar className="h-3 w-3" />
-                    {run.startDateLocal}
+                    {formatDate(run.start_date_local)}
                   </span>
-                  {run.distance && (
-                    <span className="flex items-center gap-1">
-                      <IconMapPin className="h-3 w-3" />
-                      {run.distance}
-                    </span>
-                  )}
-                  {run.movingTime && (
-                    <span className="flex items-center gap-1">
-                      <IconClock className="h-3 w-3" />
-                      {run.movingTime}
-                    </span>
-                  )}
+                  <span className="flex items-center gap-1">
+                    <IconMapPin className="h-3 w-3" />
+                    {formatDistance(run.distance)}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <IconClock className="h-3 w-3" />
+                    {formatTime(run.moving_time)}
+                  </span>
                 </div>
               </div>
               <svg
