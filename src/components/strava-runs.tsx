@@ -118,6 +118,7 @@ export const StravaRuns = async () => {
   }
 
   const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().toLocaleString("en-US", { month: "short" });
 
   return (
     <div>
@@ -140,7 +141,7 @@ export const StravaRuns = async () => {
           <ProgressBar
             current={stats.monthlyDistanceKm}
             goal={MONTHLY_GOAL_KM}
-            label={stats.source === "api" ? "Last 4 Weeks" : "This Month"}
+            label={`${currentMonth} Running`}
             icon={IconTrendingUp}
           />
         </div>

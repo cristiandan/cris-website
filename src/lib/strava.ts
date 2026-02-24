@@ -18,6 +18,7 @@ export type StravaStats = {
   ytdRunCount: number;
   ytdRunTimeHours: number;
   monthlyDistanceKm: number;
+  monthlyRunCount: number;
   source: "api" | "public";
 };
 
@@ -81,28 +82,67 @@ async function getAccessToken(): Promise<string | null> {
   }
 }
 
+function getStartOfMonthEpoch(): number {
+  const now = new Date();
+  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+  return Math.floor(startOfMonth.getTime() / 1000);
+}
+
+async function fetchThisMonthRuns(accessToken: string): Promise<{ distance: number; count: number }> {
+  try {
+    const startOfMonth = getStartOfMonthEpoch();
+    const res = await fetch(
+      `https://www.strava.com/api/v3/athlete/activities?after=${startOfMonth}&per_page=100`,
+      { headers: { Authorization: `Bearer ${accessToken}` } }
+    );
+
+    if (!res.ok) {
+      console.error("Strava API: Failed to fetch monthly activities:", res.status);
+      return { distance: 0, count: 0 };
+    }
+
+    const activities = (await res.json()) as StravaActivity[];
+    const runs = activities.filter((a) => a.type === "Run" || a.sport_type === "Run");
+    
+    const totalDistance = runs.reduce((sum, run) => {
+      const dist = typeof run.distance === "number" ? run.distance : 0;
+      return sum + dist;
+    }, 0);
+
+    return { distance: totalDistance, count: runs.length };
+  } catch (error) {
+    console.error("Strava API: Error fetching monthly activities:", error);
+    return { distance: 0, count: 0 };
+  }
+}
+
 async function fetchStatsFromAPI(): Promise<StravaStats | null> {
   const accessToken = await getAccessToken();
   if (!accessToken) return null;
 
   try {
-    const res = await fetch(
-      `https://www.strava.com/api/v3/athletes/${STRAVA_ATHLETE_ID}/stats`,
-      { headers: { Authorization: `Bearer ${accessToken}` } }
-    );
+    // Fetch YTD stats and this month's runs in parallel
+    const [statsRes, monthlyRuns] = await Promise.all([
+      fetch(
+        `https://www.strava.com/api/v3/athletes/${STRAVA_ATHLETE_ID}/stats`,
+        { headers: { Authorization: `Bearer ${accessToken}` } }
+      ),
+      fetchThisMonthRuns(accessToken),
+    ]);
 
-    if (!res.ok) {
-      console.error("Strava API: Failed to fetch stats:", res.status);
+    if (!statsRes.ok) {
+      console.error("Strava API: Failed to fetch stats:", statsRes.status);
       return null;
     }
 
-    const data = (await res.json()) as AthleteStats;
+    const data = (await statsRes.json()) as AthleteStats;
 
     return {
       ytdRunDistanceKm: Math.round((data.ytd_run_totals.distance / 1000) * 10) / 10,
       ytdRunCount: data.ytd_run_totals.count,
       ytdRunTimeHours: Math.round((data.ytd_run_totals.moving_time / 3600) * 10) / 10,
-      monthlyDistanceKm: Math.round((data.recent_run_totals.distance / 1000) * 10) / 10,
+      monthlyDistanceKm: Math.round((monthlyRuns.distance / 1000) * 10) / 10,
+      monthlyRunCount: monthlyRuns.count,
       source: "api",
     };
   } catch (error) {
@@ -215,6 +255,7 @@ async function fetchStatsFromPublic(): Promise<StravaStats | null> {
     ytdRunCount: 0, // Not available in public data
     ytdRunTimeHours: Math.round(ytdHours * 10) / 10,
     monthlyDistanceKm: monthlyKm,
+    monthlyRunCount: 0, // Not available in public data
     source: "public",
   };
 }
