@@ -3,6 +3,7 @@ import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
 import { ProofStrip } from "@/components/proof-strip";
 import { HeroBullets } from "@/components/hero-bullets";
+import { WhatIDo } from "@/components/what-i-do";
 import { AudienceRoutes } from "@/components/audience-routes";
 import { siteConfig, hero } from "@/constants/site";
 import Link from "next/link";
@@ -17,6 +18,9 @@ export default function Home() {
 
         {/* Core Bullets */}
         <HeroBullets bullets={hero.bullets} />
+
+        {/* What I Do */}
+        <WhatIDo />
 
         {/* Proof Strip */}
         <ProofStrip />
