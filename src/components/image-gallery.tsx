@@ -3,11 +3,19 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Masonry from "react-masonry-css";
 
 interface ImageGalleryProps {
   images: string[];
   title: string;
 }
+
+const breakpointColumns = {
+  default: 3,
+  1024: 3,
+  768: 2,
+  640: 2,
+};
 
 export function ImageGallery({ images, title }: ImageGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -15,7 +23,11 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
   return (
     <>
       {/* Masonry Grid */}
-      <div className="columns-2 gap-4 sm:columns-2 lg:columns-3">
+      <Masonry
+        breakpointCols={breakpointColumns}
+        className="flex w-auto -ml-4"
+        columnClassName="pl-4 bg-clip-padding"
+      >
         {images.map((img, idx) => (
           <div
             key={idx}
@@ -31,7 +43,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
             />
           </div>
         ))}
-      </div>
+      </Masonry>
 
       {/* Lightbox Modal */}
       <AnimatePresence>
