@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
+import { ImageGallery } from "@/components/image-gallery";
 import { projects } from "@/constants/projects";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -134,19 +135,7 @@ export default async function ProjectPage({ params }: Props) {
                 <h2 className="text-lg font-semibold text-neutral-900 dark:text-white mb-4">
                   Gallery
                 </h2>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {project.images.map((img, idx) => (
-                    <div key={idx} className="aspect-[4/3] overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-900">
-                      <Image
-                        src={img}
-                        alt={`${project.title} screenshot ${idx + 1}`}
-                        width={600}
-                        height={450}
-                        className="h-full w-full object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
+                <ImageGallery images={project.images} title={project.title} />
               </section>
             )}
 
