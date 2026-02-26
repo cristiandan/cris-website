@@ -63,7 +63,7 @@ export const ProjectCard = ({
             Impact
           </p>
           <ul className="mt-2 space-y-1">
-            {project.impact.slice(0, 3).map((item, idx) => (
+            {project.impact.slice(0, 4).map((item, idx) => (
               <li
                 key={idx}
                 className="flex items-start gap-2 text-sm text-neutral-600 dark:text-neutral-300"
@@ -72,9 +72,9 @@ export const ProjectCard = ({
                 {item}
               </li>
             ))}
-            {project.impact.length > 3 && (
+            {project.impact.length > 4 && (
               <li className="text-sm text-neutral-400 dark:text-neutral-500">
-                +{project.impact.length - 3} more...
+                +{project.impact.length - 4} more...
               </li>
             )}
           </ul>
