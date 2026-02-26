@@ -1,20 +1,28 @@
 export type Project = {
   title: string;
+  slug: string;
   role: string;
   category: string;
   description: string;
   problem: string;
+  solution?: string;
   impact: string[];
   stack: string[];
   href?: string;
   image?: string;
+  images?: string[];
+  timeline?: string;
+  press?: { title: string; url: string }[];
+  video?: string;
 };
 
 export const projects: Project[] = [
   {
     title: "Yayzy",
+    slug: "yayzy",
     role: "Co-founder & CTO",
     category: "Fintech / Sustainability / AI",
+    timeline: "2019 – 2024",
     description:
       "Carbon footprint tracking through Open Banking — turning messy transaction data into actionable environmental insights.",
     problem:
@@ -30,8 +38,10 @@ export const projects: Project[] = [
   },
   {
     title: "Elektrik Network",
+    slug: "elektrik",
     role: "Engineering Manager",
     category: "DeFi / Blockchain",
+    timeline: "2024 (6-month contract)",
     description:
       "Decentralized exchange on LightLink (Ethereum L2) with gasless trading and token governance.",
     problem:
@@ -48,8 +58,10 @@ export const projects: Project[] = [
   },
   {
     title: "Stint",
+    slug: "stint",
     role: "CTO",
     category: "Staffing / Gig Economy",
+    timeline: "2018 – 2019",
     description:
       "On-demand student workforce platform connecting employers with university students.",
     problem:
@@ -63,8 +75,10 @@ export const projects: Project[] = [
   },
   {
     title: "Zebra Fuel",
+    slug: "zebra",
     role: "Senior Engineer / Mobile Lead",
     category: "On-demand Delivery / Logistics",
+    timeline: "2017 – 2018",
     description:
       "On-demand fuel delivery with real-time routing and fleet management.",
     problem:
@@ -77,8 +91,10 @@ export const projects: Project[] = [
   },
   {
     title: "Risky Business",
+    slug: "risky-business",
     role: "Product Associate",
     category: "Venture Capital",
+    timeline: "2017",
     description:
       "Early-stage VC firm — hands-on product work with portfolio startups.",
     problem:
@@ -92,26 +108,39 @@ export const projects: Project[] = [
   },
   {
     title: "City365",
+    slug: "city365",
     role: "Technical Co-founder",
     category: "Hyper-local Marketplace / AI",
+    timeline: "2015 – 2017",
     description:
       "Real-time deals platform with proprietary AI that automatically fills empty venues by targeting nearby users.",
     problem: "Restaurants lose money on empty tables. Traditional marketing can't bring customers right when you need them.",
+    solution: "Built a SaaS platform that integrates with venue POS systems, detects low occupancy in real-time, and automatically generates targeted offers to nearby users — filling venues in minutes without human intervention.",
     impact: [
       "Built from hackathon win to Spherik Accelerator in Romania",
-      "Raised €15K pre-seed, partnered with UNTOLD festival (biggest in Europe)",
+      "Raised €15K pre-seed at €150K valuation",
+      "Partnered with UNTOLD festival (biggest in Europe) — investor is festival owner",
       "30+ venue partners, 5,000 pre-registered users",
+      "Pilot: 10 bars, 1,000 users validated",
       "Pitched at Startup Avalanche to Tim Draper and top EU VCs",
       "Featured in Forbes Romania and Ziarul Financiar",
       "Built while working part-time and completing master's degree",
     ],
     stack: ["Ionic", "Angular", "Node.js", "Azure", "Proprietary AI"],
     href: "https://www.youtube.com/watch?v=WhJngwDFqsM",
+    video: "https://www.youtube.com/watch?v=WhJngwDFqsM",
+    press: [
+      { title: "Forbes Romania", url: "https://www.forbes.ro/articles/cele-mai-interesante-proiecte-si-aplicatii-ale-viitorilor-antreprenori-din-ul-romanesc-39761" },
+      { title: "Ziarul Financiar", url: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260" },
+      { title: "Techsylvania", url: "https://medium.com/techsylvania/the-16-international-startup-finalists-at-startup-avalanche-c21e243c5d1f" },
+    ],
   },
   {
     title: "clawdev.to",
+    slug: "clawdev",
     role: "Creator",
     category: "Developer Community",
+    timeline: "2024 – Present",
     description:
       "Community hub for OpenClaw/Clawdbot developers — tutorials, skills, and bot-to-bot knowledge sharing.",
     problem: "AI agent developers had no dedicated space to share workflows and learn from each other.",
