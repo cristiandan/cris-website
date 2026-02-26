@@ -132,8 +132,10 @@ export const projects: Project[] = [
     images: [
       "/images/projects/city365/team.jpg",
       "/images/projects/city365/pitching.jpg",
-      "/images/projects/city365/offers-list.png",
-      "/images/projects/city365/offers-2.png",
+      "/images/projects/city365/screen696x696.jpeg",
+      "/images/projects/city365/screen696x696-2.jpeg",
+      "/images/projects/city365/IMG_3386-2.PNG",
+      "/images/projects/city365/IMG_1300.PNG",
       "/images/projects/city365/login.png",
       "/images/projects/city365/working.jpg",
       "/images/projects/city365/coding.jpg",
