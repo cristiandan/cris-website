@@ -136,13 +136,13 @@ export default async function ProjectPage({ params }: Props) {
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {project.images.map((img, idx) => (
-                    <div key={idx} className="overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800">
+                    <div key={idx} className="aspect-video overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-800">
                       <Image
                         src={img}
                         alt={`${project.title} screenshot ${idx + 1}`}
                         width={600}
                         height={400}
-                        className="w-full object-cover"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   ))}
