@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Cristian Dan",
-  title: "Cristian Dan — Fintech & AI Engineer",
+  title: "Cristian Dan — CTO & Technical Co-founder",
   description:
-    "I build fintech infrastructure and AI-enabled products—from zero to production—bringing founder-level ownership with tech-lead execution.",
+    "I build things from zero to paying customers, fast. Startups hire me to ship MVPs, scale infrastructure, or lead engineering teams.",
   url: "https://cris-website.netlify.app",
   email: "cristian.dan@live.com",
   social: {
@@ -15,31 +15,33 @@ export const siteConfig = {
 export const hero = {
   headline: "Cristian Dan",
   subheadline:
-    "I build fintech infrastructure and AI-enabled products—from zero to production—bringing founder-level ownership with tech-lead execution.",
+    "I build things from zero to paying customers, fast. Startups hire me to ship MVPs, scale infrastructure, or lead engineering teams.",
   bullets: [
     {
-      title: "Ship end-to-end",
-      description: "Architecture, backend, frontend, infra (AWS/Terraform)",
+      title: "0 → shipped",
+      description: "Architecture to production, usually in weeks not months",
     },
     {
       title: "Lead with context",
-      description: "Built & led distributed teams (up to 7 engineers) with founder constraints",
+      description: "Built & led teams (up to 7 engineers) with founder constraints",
     },
     {
-      title: "Scale securely",
-      description: "Open Banking integrations (2,500+ banks), ISO 27001 compliance",
+      title: "Full-stack + secure",
+      description: "Open Banking, DeFi, ISO 27001 — not just code, but compliance",
     },
   ],
 };
 
 export const about = {
-  narrative: `Started bootstrapping early in Romania (City365), building high-scale Azure backends for hyper-local deals.
+  narrative: `First startup at 21 — built City365 from a hackathon win to an accelerator-backed company, pitching to Tim Draper while finishing my master's and working part-time to pay rent.
 
-Moved to London to lead mobile/frontend eng at fast-paced startups like Zebra Fuel (logistics) and Stint (workforce), managing teams of 6+.
+Moved to London and led mobile/frontend engineering at fast-paced startups: Zebra Fuel (logistics), Stint (gig economy), managing teams of 6+.
 
-Co-founded Yayzy to solve a harder data problem. Learned how to raise ($1.5M), hire/manage (team of 7), and ship bank-grade secure infra under pressure—featured by Apple, Forbes, and TechCrunch along the way.
+Co-founded Yayzy and wore every hat: raised $1.5M, built a team of 7, shipped Open Banking integrations with 2,500+ banks, got featured by Apple, Forbes, and TechCrunch.
 
-Now focused on **fintech infrastructure** and **AI product engineering**—building systems that are secure, scalable, and actually ship.`,
+Recently led a DeFi project (Elektrik Network) through V1 launch and agency-to-internal team migration.
+
+**What I do now:** Fractional CTO, technical co-founder, or hands-on engineering — whatever gets your product shipped.`,
   stack: [
     "TypeScript",
     "Node.js",

@@ -12,6 +12,24 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Elektrik Network",
+    role: "Engineering Manager",
+    category: "DeFi / Blockchain",
+    description:
+      "Decentralized exchange on LightLink (Ethereum L2) with gasless trading and token governance.",
+    problem:
+      "External agency had built the DEX but with zero documentation. Client needed to ship V1 and bring development in-house without losing momentum.",
+    impact: [
+      "Shipped V1 on schedule",
+      "Hired 5-person internal team (frontend, backend, Solidity, QA, design)",
+      "Documented entire undocumented codebase and infrastructure",
+      "Migrated from agency to internal team with zero downtime",
+      "Coordinated full smart contract security audit",
+    ],
+    stack: ["Solidity", "React", "Node.js", "AWS", "LightLink"],
+    href: "https://elektrik.network",
+  },
+  {
     title: "Yayzy",
     role: "Co-founder & CTO",
     category: "Fintech / Sustainability / AI",
@@ -74,17 +92,21 @@ export const projects: Project[] = [
   },
   {
     title: "City365",
-    role: "Co-founder",
-    category: "Hyper-local Marketplace",
+    role: "Technical Co-founder",
+    category: "Hyper-local Marketplace / AI",
     description:
-      "Connecting restaurants with empty tables to students looking for deals.",
-    problem: "Restaurants had empty tables/expiring stock; students wanted deals.",
+      "Real-time deals platform with proprietary AI that automatically fills empty venues by targeting nearby users.",
+    problem: "Restaurants lose money on empty tables. Traditional marketing can't bring customers right when you need them.",
     impact: [
-      "Built backend/admin/mobile app with a team of 3",
-      "Scaled Azure backend to handle tens of thousands of requests/sec",
+      "Built from hackathon win to Spherik Accelerator in Romania",
+      "Raised €15K pre-seed, partnered with UNTOLD festival (biggest in Europe)",
+      "30+ venue partners, 5,000 pre-registered users",
+      "Pitched at Startup Avalanche to Tim Draper and top EU VCs",
+      "Featured in Forbes Romania and Ziarul Financiar",
+      "Built while working part-time and completing master's degree",
     ],
-    stack: ["Ionic", "Angular", "Node.js", "Azure"],
-    href: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260",
+    stack: ["Ionic", "Angular", "Node.js", "Azure", "Proprietary AI"],
+    href: "https://www.youtube.com/watch?v=WhJngwDFqsM",
   },
   {
     title: "clawdev.to",
