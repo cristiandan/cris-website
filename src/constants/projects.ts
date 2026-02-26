@@ -144,6 +144,8 @@ export const projects: Project[] = [
       { title: "Forbes Romania", url: "https://www.forbes.ro/articles/cele-mai-interesante-proiecte-si-aplicatii-ale-viitorilor-antreprenori-din-ul-romanesc-39761" },
       { title: "Ziarul Financiar", url: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260" },
       { title: "Techsylvania", url: "https://medium.com/techsylvania/the-16-international-startup-finalists-at-startup-avalanche-c21e243c5d1f" },
+      { title: "Spherik Accelerator", url: "https://web.archive.org/web/20170728161813/https://spherikaccelerator.com/startups/" },
+      { title: "Innovation Labs", url: "https://2016.innovationlabs.ro/2016.innovationlabs.ro/team/2015/city365/index.html" },
     ],
   },
   {
