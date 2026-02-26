@@ -12,6 +12,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Yayzy",
+    role: "Co-founder & CTO",
+    category: "Fintech / Sustainability / AI",
+    description:
+      "Carbon footprint tracking through Open Banking — turning messy transaction data into actionable environmental insights.",
+    problem:
+      "Banking data is messy and carbon footprinting was manual/inaccurate.",
+    impact: [
+      "Integrated 2,500+ banks via Open Banking APIs",
+      "Featured as Apple App of the Day",
+      "Processed millions of transactions with real-time ML classification",
+      "Raised ~$1.5M, built team of 7 engineers",
+    ],
+    stack: ["Node.js", "React Native", "AWS", "Python", "Terraform"],
+    href: "https://apps.apple.com/gb/app/yayzy-carbon-footprint-co2/id1518567565",
+  },
+  {
     title: "Elektrik Network",
     role: "Engineering Manager",
     category: "DeFi / Blockchain",
@@ -28,23 +45,6 @@ export const projects: Project[] = [
     ],
     stack: ["Solidity", "React", "Node.js", "AWS", "LightLink"],
     href: "https://elektrik.network",
-  },
-  {
-    title: "Yayzy",
-    role: "Co-founder & CTO",
-    category: "Fintech / Sustainability / AI",
-    description:
-      "Carbon footprint tracking through Open Banking — turning messy transaction data into actionable environmental insights.",
-    problem:
-      "Banking data is messy and carbon footprinting was manual/inaccurate.",
-    impact: [
-      "Integrated 2,500+ banks via Open Banking APIs",
-      "Featured as Apple App of the Day",
-      "Processed millions of transactions with real-time ML classification",
-      "Raised ~$1.5M, built team of 7 engineers",
-    ],
-    stack: ["Node.js", "React Native", "AWS", "Python", "Terraform"],
-    href: "https://apps.apple.com/gb/app/yayzy-carbon-footprint-co2/id1518567565",
   },
   {
     title: "Stint",
