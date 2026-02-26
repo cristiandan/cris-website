@@ -139,7 +139,6 @@ export const projects: Project[] = [
       "/images/projects/city365/login.png",
       "/images/projects/city365/working.jpg",
       "/images/projects/city365/coding.jpg",
-      "/images/projects/city365/offer-confirm.jpg",
     ],
     press: [
       { title: "Forbes Romania", url: "https://www.forbes.ro/articles/cele-mai-interesante-proiecte-si-aplicatii-ale-viitorilor-antreprenori-din-ul-romanesc-39761" },
