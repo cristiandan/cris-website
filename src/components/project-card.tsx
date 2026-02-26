@@ -11,7 +11,7 @@ export const ProjectCard = ({
   index: number;
 }) => {
   return (
-    <Link href={`/work/${project.slug}`}>
+    <Link href={`/work/${project.slug}`} className="block">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

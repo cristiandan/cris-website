@@ -22,7 +22,7 @@ export const projects: Project[] = [
     slug: "yayzy",
     role: "Co-founder & CTO",
     category: "Fintech / Sustainability / AI",
-    timeline: "2019 – 2024",
+    timeline: "2019 – 2025",
     description:
       "Carbon footprint tracking through Open Banking — turning messy transaction data into actionable environmental insights.",
     problem:
