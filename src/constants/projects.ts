@@ -124,7 +124,7 @@ export const projects: Project[] = [
       "Pilot: 10 bars, 1,000 users validated",
       "Pitched at Startup Avalanche to Tim Draper and top EU VCs",
       "Featured in Forbes Romania and Ziarul Financiar",
-      "Built while working part-time and completing master's degree",
+      "Led all technical work while juggling a part-time job to pay the bills and a master's program",
     ],
     stack: ["Ionic", "Angular", "Node.js", "Azure", "Proprietary AI"],
     href: "https://www.youtube.com/watch?v=WhJngwDFqsM",
