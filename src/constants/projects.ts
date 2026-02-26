@@ -147,7 +147,8 @@ export const projects: Project[] = [
       { title: "Forbes Romania", url: "https://www.forbes.ro/articles/cele-mai-interesante-proiecte-si-aplicatii-ale-viitorilor-antreprenori-din-ul-romanesc-39761" },
       { title: "Ziarul Financiar", url: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260" },
       { title: "Techsylvania", url: "https://medium.com/techsylvania/the-16-international-startup-finalists-at-startup-avalanche-c21e243c5d1f" },
-      { title: "Transilvania Reporter", url: "https://transilvaniareporter.ro/cluj/11-startup-uri-tech-din-cluj-si-au-prezentat-proiectele-in-fata-investitorilor-de-la-demo-day/" },
+      { title: "Sătmăreanul", url: "https://www.satmareanul.net/2015/03/28/city365-o-aplicatie-dezvoltata-de-o-echipa-de-studenti-din-care-fac-parte-si-doi-satmareni/" },
+      { title: "Playtech", url: "https://playtech.ro/2015/cum-vor-tinerii-din-cluj-sa-faca-tehnologia-mai-utila-acestea-sunt-proiectele-care-ne-ar-ajuta/" },
     ],
     links: [
       { title: "Spherik Accelerator", url: "https://web.archive.org/web/20170728161813/https://spherikaccelerator.com/startups/" },
