@@ -131,8 +131,12 @@ export const projects: Project[] = [
     video: "https://www.youtube.com/watch?v=WhJngwDFqsM",
     images: [
       "/images/projects/city365/team.jpg",
+      "/images/projects/city365/pitching.jpg",
       "/images/projects/city365/offers-list.png",
+      "/images/projects/city365/offers-2.png",
+      "/images/projects/city365/login.png",
       "/images/projects/city365/working.jpg",
+      "/images/projects/city365/coding.jpg",
       "/images/projects/city365/offer-confirm.jpg",
     ],
     press: [
