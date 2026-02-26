@@ -42,3 +42,7 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# Personal strategy & content files
+STRATEGY.md
+/work/
