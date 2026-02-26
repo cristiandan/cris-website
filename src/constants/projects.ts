@@ -129,6 +129,12 @@ export const projects: Project[] = [
     stack: ["Ionic", "Angular", "Node.js", "Azure", "Proprietary AI"],
     href: "https://www.youtube.com/watch?v=WhJngwDFqsM",
     video: "https://www.youtube.com/watch?v=WhJngwDFqsM",
+    images: [
+      "/images/projects/city365/team.jpg",
+      "/images/projects/city365/offers-list.png",
+      "/images/projects/city365/working.jpg",
+      "/images/projects/city365/offer-confirm.jpg",
+    ],
     press: [
       { title: "Forbes Romania", url: "https://www.forbes.ro/articles/cele-mai-interesante-proiecte-si-aplicatii-ale-viitorilor-antreprenori-din-ul-romanesc-39761" },
       { title: "Ziarul Financiar", url: "https://www.zf.ro/business-hi-tech/patru-studenti-din-cluj-au-o-aplicatie-care-ajuta-restaurantele-sa-gaseasca-clienti-14770260" },
