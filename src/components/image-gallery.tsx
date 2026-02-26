@@ -31,7 +31,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
         {images.map((img, idx) => (
           <div
             key={idx}
-            className="mb-4 cursor-pointer overflow-hidden rounded-lg border border-neutral-200 transition-opacity hover:opacity-90 dark:border-neutral-800"
+            className="group mb-4 cursor-pointer overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800"
             onClick={() => setSelectedImage(img)}
           >
             <Image
@@ -39,7 +39,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
               alt={`${title} screenshot ${idx + 1}`}
               width={600}
               height={800}
-              className="w-full object-cover"
+              className="w-full object-cover transition-transform duration-200 group-hover:scale-[1.02]"
             />
           </div>
         ))}
