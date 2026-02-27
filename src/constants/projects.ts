@@ -93,6 +93,8 @@ export const projects: Project[] = [
     images: [
       "/images/projects/stint/team-photo.jpg",
       "/images/projects/stint/cristian-hoodie.jpg",
+      "/images/projects/stint/app-landing.png",
+      "/images/projects/stint/app-calendar.png",
       "/images/projects/stint/app-offer.png",
       "/images/projects/stint/app-chipotle-job.png",
       "/images/projects/stint/app-business-post.png",
