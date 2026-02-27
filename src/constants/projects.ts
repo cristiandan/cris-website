@@ -122,6 +122,7 @@ export const projects: Project[] = [
       { title: "Yayzy Launch Shoutout", url: "https://www.facebook.com/share/1831T1L8oY/" },
     ],
     images: [
+      "/images/projects/risky-business/techsylvania-working.jpg",
       "/images/projects/risky-business/yayzy-shoutout.jpg",
     ],
   },
