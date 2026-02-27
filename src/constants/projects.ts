@@ -98,18 +98,28 @@ export const projects: Project[] = [
     category: "Venture Capital / Accelerator",
     timeline: "2016 – 2017",
     description:
-      "Joined the team behind Romania's best accelerator program after my own startup journey — helping portfolio startups with product strategy and development.",
+      "Joined Romania's first pre-seed fund and accelerator after my own startup journey — helping portfolio startups refine ideas, prepare for pitching, and implement technical strategy.",
     problem:
       "After City365, I wanted to learn the other side: how accelerators and VCs evaluate startups, guide product development, and help founders succeed.",
-    solution: "Joined Spherik/Risky Business as Product Apprentice — keeping teams' products on track, providing technical guidance, and learning product management from experienced entrepreneurs who had built and exited companies.",
+    solution: "Joined Spherik/Risky Business as Product Apprentice — working hands-on with startups on product refinement, pitch preparation, and technical strategy. Also helped organize Techsylvania and Startup Avalanche, judged pitching competitions, and scouted talent at hackathons.",
     impact: [
       "Part of the team recognized by CEE Awards as best entrepreneurship program in Romania",
+      "Helped startups like Ebriza (€70K investment at €500K valuation), Clever Taxi, ChatX.ai, Skillview, ZigZad, BounceMatch, NiftyLearning, and Mushin",
+      "Co-organized Startup Avalanche — international competition with €150K prize, featuring Tim Draper and Mark Shuttleworth as judges",
+      "Judged pitching competitions and scouted new talent at student hackathons across Romania",
       "Worked alongside advisors from LiveRail (€500M exit to Facebook) and Skobbler (€24M exit to Telenav)",
-      "Helped portfolio startups like Planable (won Startup Avalanche, CEO accepted to Draper University) and Printivate (acquired by 3D Hubs)",
-      "Supported Startup Avalanche — brought Tim Draper and Mark Shuttleworth to Romania",
       "Learned product strategy from founders who built TripJournal (#1 app of 2009 by Google), Trilulilu, and Frisbo",
     ],
-    stack: ["Product Strategy", "Technical Advisory", "Startup Operations", "Due Diligence"],
+    stack: ["Product Strategy", "Technical Advisory", "Pitch Coaching", "Due Diligence", "Event Organization"],
+    press: [
+      { title: "EU-Startups", url: "https://www.eu-startups.com/2019/04/clujs-startup-ecosystem-at-a-glance/" },
+      { title: "Business Review", url: "https://business-review.eu/tech/startup-avalanche-competition-organized-by-risky-business-during-techsylvania-gives-out-a-winning-prize-of-eur-150000-to-the-australian-startup-agunity-213596" },
+      { title: "Startup Cafe", url: "https://startupcafe.ro/stiri-afaceri-21677254-risky-business-ebrize-investitie-casa-marcat-virtuala-htm-3406" },
+      { title: "Start-up.ro", url: "https://start-up.ro/risky-business-si-universitatea-babes-bolyai-lanseaza-un-accelerator/" },
+    ],
+    links: [
+      { title: "Accelerate Romania", url: "https://accelerate.gov.ro/en/entities/risky-business" },
+    ],
   },
   {
     title: "City365",
