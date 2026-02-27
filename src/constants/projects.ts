@@ -119,6 +119,10 @@ export const projects: Project[] = [
     ],
     links: [
       { title: "Accelerate Romania", url: "https://accelerate.gov.ro/en/entities/risky-business" },
+      { title: "Yayzy Launch Shoutout", url: "https://www.facebook.com/share/1831T1L8oY/" },
+    ],
+    images: [
+      "/images/projects/risky-business/yayzy-shoutout.jpg",
     ],
   },
   {
