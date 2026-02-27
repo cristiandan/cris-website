@@ -91,6 +91,7 @@ export const projects: Project[] = [
     ],
     video: "https://youtube.com/shorts/U7lttoER0oI",
     images: [
+      "/images/projects/stint/team-photo.jpg",
       "/images/projects/stint/cristian-hoodie.jpg",
       "/images/projects/stint/app-offer.png",
       "/images/projects/stint/app-chipotle-job.png",
