@@ -108,7 +108,7 @@ export const projects: Project[] = [
       "Co-organized Startup Avalanche — international competition with €150K prize, featuring Tim Draper and Mark Shuttleworth as judges",
       "Judged pitching competitions and scouted new talent at student hackathons across Romania",
       "Worked alongside advisors from LiveRail (€500M exit to Facebook) and Skobbler (€24M exit to Telenav)",
-      "Later became CTO of Yayzy — Risky Business promoted the launch, calling me 'our very own product ninja who went on to do impactful things'",
+      "Full circle: when Yayzy launched years later, the team proudly celebrated it as a win for the whole community — 'our very own going on to do impactful things'",
     ],
     stack: ["Product Strategy", "Technical Advisory", "Pitch Coaching", "Due Diligence", "Event Organization"],
     press: [
