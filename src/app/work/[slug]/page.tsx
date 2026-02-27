@@ -169,27 +169,42 @@ export default async function ProjectPage({ params }: Props) {
                   Videos
                 </h2>
                 <div className="space-y-6">
-                  {project.videos.map((video, idx) => (
-                    <div key={idx}>
-                      <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                        {video.title}
-                      </h3>
-                      <div className="aspect-video overflow-hidden rounded-lg">
-                        <iframe
-                          src={video.url
-                            .replace("watch?v=", "embed/")
-                            .replace("youtube.com/shorts/", "youtube.com/embed/")
-                            .replace("youtu.be/", "youtube.com/embed/")
-                            .replace("vimeo.com/", "player.vimeo.com/video/")
-                            .replace(/\?.*$/, "")}
-                          title={video.title}
-                          className="h-full w-full"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
+                  {project.videos.map((video, idx) => {
+                    let embedUrl = video.url
+                      .replace("watch?v=", "embed/")
+                      .replace("youtube.com/shorts/", "youtube.com/embed/")
+                      .replace("youtu.be/", "youtube.com/embed/");
+                    
+                    // Handle Vimeo private links: vimeo.com/ID/HASH -> player.vimeo.com/video/ID?h=HASH
+                    const vimeoMatch = embedUrl.match(/vimeo\.com\/(\d+)\/([a-zA-Z0-9]+)/);
+                    if (vimeoMatch) {
+                      embedUrl = `https://player.vimeo.com/video/${vimeoMatch[1]}?h=${vimeoMatch[2]}`;
+                    } else {
+                      embedUrl = embedUrl.replace("vimeo.com/", "player.vimeo.com/video/");
+                    }
+                    
+                    // Clean up any remaining query params for non-Vimeo
+                    if (!embedUrl.includes("vimeo")) {
+                      embedUrl = embedUrl.replace(/\?.*$/, "");
+                    }
+                    
+                    return (
+                      <div key={idx}>
+                        <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
+                          {video.title}
+                        </h3>
+                        <div className="aspect-video overflow-hidden rounded-lg">
+                          <iframe
+                            src={embedUrl}
+                            title={video.title}
+                            className="h-full w-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </section>
             )}

@@ -58,7 +58,7 @@ export const projects: Project[] = [
     videos: [
       { title: "Crowdfunding Campaign 2020", url: "https://youtu.be/zvyYckIAKE4" },
       { title: "Promo Video 2022", url: "https://vimeo.com/736152088" },
-      { title: "Crowdfunding Campaign 2022", url: "https://vimeo.com/720574853" },
+      { title: "Crowdfunding Campaign 2022", url: "https://vimeo.com/720574853/2b891d3ac2" },
       { title: "Antler Demo Day 2019", url: "https://www.youtube.com/watch?v=lODg7xSkmvw" },
     ],
     images: [
