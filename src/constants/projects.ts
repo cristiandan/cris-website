@@ -16,6 +16,7 @@ export type Project = {
   press?: { title: string; url: string }[];
   links?: { title: string; url: string }[];
   video?: string;
+  videos?: { title: string; url: string }[];
 };
 
 export const projects: Project[] = [
@@ -53,12 +54,13 @@ export const projects: Project[] = [
       { title: "Product Hunt", url: "https://www.producthunt.com/products/yayzy" },
       { title: "PwC Future50 Report", url: "https://www.pwc.co.uk/issues/esg/pdf/net-zero-future-50-2022.pdf" },
       { title: "Apple App of the Day", url: "https://apps.apple.com/gb/story/id1539957783" },
-      { title: "Crowdfunding 2020", url: "https://youtu.be/zvyYckIAKE4" },
-      { title: "Crowdfunding 2022", url: "https://vimeo.com/720574853/2b891d3ac2" },
-      { title: "Antler Promo 2019", url: "https://www.youtube.com/watch?v=lODg7xSkmvw" },
-      { title: "Promo 2022", url: "https://vimeo.com/736152088" },
     ],
-    video: "https://youtu.be/zvyYckIAKE4",
+    videos: [
+      { title: "Crowdfunding Campaign 2020", url: "https://youtu.be/zvyYckIAKE4" },
+      { title: "Promo Video 2022", url: "https://vimeo.com/736152088" },
+      { title: "Crowdfunding Campaign 2022", url: "https://vimeo.com/720574853" },
+      { title: "Antler Demo Day 2019", url: "https://www.youtube.com/watch?v=lODg7xSkmvw" },
+    ],
     images: [
       "/images/projects/yayzy/founders-banner.jpg",
       "/images/projects/yayzy/team-event.jpg",
