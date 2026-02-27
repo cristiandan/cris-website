@@ -65,15 +65,37 @@ export const projects: Project[] = [
     category: "Staffing / Gig Economy",
     timeline: "2018 – 2019",
     description:
-      "On-demand student workforce platform connecting employers with university students.",
+      "On-demand student workforce platform — 'Uber for hospitality labour' — connecting high street businesses with university students for flexible short shifts. Now serving 75,000+ students and 1,000+ businesses including The Ivy, Ted Baker, and Chipotle.",
     problem:
-      "Employers needed flexible student workers; students needed flexible income.",
+      "The app was being built by an external agency without any in-house technical leadership — no architecture, no roadmap, and no engineering processes. A major fast food chain expected to go live in 3 months. Students needed flexible income that fit around lectures; businesses needed peak-hour support without committing to full shifts.",
+    solution:
+      "Joined as CTO and immediately implemented structure: Jira for tracking, clean architecture designed for the timeline, and engineering culture with code reviews and standups. Worked elbow-to-elbow with developers to ship on deadline, then rearchitected for scalability and security.",
     impact: [
-      "Grew platform from MVP to 4,000+ users and 150+ job postings/week",
-      "Built and led team of 6 engineers",
-      "Delivered MVP in under 4 months",
+      "Delivered MVP in under 4 months — major fast food chain went live on schedule",
+      "Job postings grew 15x: from 10/week to 150+ per week",
+      "Built team from 2 developers to 6 (hired 4 devs + designer)",
+      "Migrated Firebase → AWS, cutting infrastructure costs by 70%",
+      "Platform grew to 4,000+ verified students in London",
+      "Established engineering culture: Jira, code reviews, standups, mentoring",
+      "Technology enabled 40,000+ stints at 1,000+ businesses",
     ],
-    stack: ["React", "React Native", "Node.js", "Firebase"],
+    stack: ["React", "React Native", "Node.js", "Firebase", "AWS", "Jira"],
+    press: [
+      { title: "Evening Standard", url: "https://www.standard.co.uk/news/tech/stint-app-students-jobs-high-street-a4544136.html" },
+      { title: "The Times", url: "https://www.thetimes.com/life-style/food-drink/article/fancy-a-two-hour-shift-try-stint-a-new-app-helping-student-cash-in-q7vv55938" },
+      { title: "Eater London", url: "https://london.eater.com/22677117/restaurant-jobs-temporary-work-apps-gig-economy" },
+      { title: "TechRound", url: "https://techround.co.uk/interviews/sam-sol-schlagman-stint/" },
+    ],
+    links: [
+      { title: "Stint Website", url: "https://stint.co/" },
+    ],
+    video: "https://youtube.com/shorts/U7lttoER0oI",
+    images: [
+      "/images/projects/stint/cristian-hoodie.jpg",
+      "/images/projects/stint/app-offer.png",
+      "/images/projects/stint/app-chipotle-job.png",
+      "/images/projects/stint/app-business-post.png",
+    ],
   },
   {
     title: "Zebra Fuel",
@@ -82,14 +104,37 @@ export const projects: Project[] = [
     category: "On-demand Delivery / Logistics",
     timeline: "2017 – 2018",
     description:
-      "On-demand fuel delivery with real-time routing and fleet management.",
+      "On-demand fuel delivery startup backed by LocalGlobe, Firstminute Capital, and Zoopla founder Alex Chesterman — bringing fuel directly to vehicles across London. \"Like a Formula 1 pit stop for your car.\"",
     problem:
-      "Fuel delivery logistics needed real-time routing and high-reliability consumer apps.",
+      "Zebra Fuel was growing its consumer delivery service but needed a strategic pivot to expand revenue beyond individual customers and build scalable fleet management tools.",
+    solution:
+      "Proposed and built a B2B business vertical from scratch, architecting the mobile apps and real-time fleet dashboard while mentoring a junior developer. The B2B pivot transformed the company from consumer-only to serving commercial fleets overnight.",
     impact: [
-      "Managed technology used by 1000s of individual users and 70 business fleets",
-      "Architected dashboard with GraphQL/Relay for real-time fleet visibility",
+      "Grew business clients from 0 to 150, creating new B2B revenue stream",
+      "Shipped iOS/Android apps used by thousands of Londoners",
+      "Built custom routing logic enabling <30min delivery windows",
+      "Architected ZEBRADASH — real-time fleet dashboard with GraphQL/Relay showing live orders, fuel delivery stats, and B2B vs B2C analytics",
+      "Part of team during $2.5M seed raise from LocalGlobe, Firstminute Capital (their first investment), and Alex Chesterman",
+      "Technology served 3,000+ customers and 15-van fleet at funding",
     ],
-    stack: ["React Native", "Redux", "GraphQL", "Relay", "Google Maps API"],
+    stack: ["React Native", "Redux", "GraphQL", "Relay", "Google Maps API", "WebSocket"],
+    press: [
+      { title: "TechCrunch", url: "https://techcrunch.com/2018/02/05/zebra-fuel/" },
+      { title: "Tech.eu", url: "https://tech.eu/2018/02/05/zebra-fuel-funding/" },
+      { title: "Daily Mail", url: "https://www.dailymail.co.uk/news/article-5364769/Deliveroo-style-petrol-app-fuels-car-sleep.html" },
+    ],
+    links: [
+      { title: "Web Archive", url: "https://web.archive.org/web/20190510045016/https://www.zebra-fuel.com/" },
+      { title: "TechCrunch (Shutdown)", url: "https://techcrunch.com/2019/11/28/zebra-fuel-no-longer-delivering-london/" },
+    ],
+    images: [
+      "/images/projects/zebra-fuel/dashboard-live-stats.jpg",
+      "/images/projects/zebra-fuel/dashboard-b2b-orders.jpg",
+      "/images/projects/zebra-fuel/app-intro.jpg",
+      "/images/projects/zebra-fuel/app-order-confirmation.png",
+      "/images/projects/zebra-fuel/app-booking.jpg",
+      "/images/projects/zebra-fuel/website-homepage.jpg",
+    ],
   },
   {
     title: "Risky Business / Spherik",

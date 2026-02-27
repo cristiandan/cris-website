@@ -147,7 +147,10 @@ export default async function ProjectPage({ params }: Props) {
                 </h2>
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <iframe
-                    src={project.video.replace("watch?v=", "embed/")}
+                    src={project.video
+                      .replace("watch?v=", "embed/")
+                      .replace("youtube.com/shorts/", "youtube.com/embed/")
+                      .replace(/\?.*$/, "")}
                     title={`${project.title} video`}
                     className="h-full w-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
