@@ -105,7 +105,6 @@ export const projects: Project[] = [
     impact: [
       "Part of the team recognized by CEE Awards as best entrepreneurship program in Romania",
       "Helped startups like Ebriza (€70K investment at €500K valuation), Clever Taxi, ChatX.ai, Skillview, ZigZad, BounceMatch, NiftyLearning, and Mushin",
-      "Co-organized Startup Avalanche — international competition with €150K prize, featuring Tim Draper and Mark Shuttleworth as judges",
       "Judged pitching competitions and scouted new talent at student hackathons across Romania",
       "Worked alongside advisors from LiveRail (€500M exit to Facebook) and Skobbler (€24M exit to Telenav)",
       "Full circle: when Yayzy launched years later, the team proudly celebrated it as a win for the whole community — 'our very own going on to do impactful things'",
