@@ -109,7 +109,7 @@ export const projects: Project[] = [
       "Worked alongside advisors from LiveRail (€500M exit to Facebook) and Skobbler (€24M exit to Telenav)",
       "Full circle: when Yayzy launched years later, the team proudly celebrated it as a win for the whole community — 'our very own going on to do impactful things'",
     ],
-    stack: ["Product Strategy", "Technical Advisory", "Pitch Coaching", "Due Diligence", "Event Organization"],
+    stack: ["Product Strategy", "Technical Advisory", "Pitch Coaching", "Due Diligence", "Tech Talent Scouting"],
     press: [
       { title: "EU-Startups", url: "https://www.eu-startups.com/2019/04/clujs-startup-ecosystem-at-a-glance/" },
       { title: "Business Review", url: "https://business-review.eu/tech/startup-avalanche-competition-organized-by-risky-business-during-techsylvania-gives-out-a-winning-prize-of-eur-150000-to-the-australian-startup-agunity-213596" },
