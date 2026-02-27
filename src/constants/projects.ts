@@ -123,6 +123,9 @@ export const projects: Project[] = [
     ],
     images: [
       "/images/projects/risky-business/techsylvania-working.jpg",
+      "/images/projects/risky-business/team-full.jpg",
+      "/images/projects/risky-business/team-small.jpg",
+      "/images/projects/risky-business/mentoring-session.jpg",
       "/images/projects/risky-business/yayzy-shoutout.jpg",
     ],
   },
