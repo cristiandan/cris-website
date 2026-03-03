@@ -46,3 +46,8 @@ next-env.d.ts
 # Personal strategy & content files
 STRATEGY.md
 /work/
+
+# Project tracking (autonomous workers)
+STATE.md
+ROADMAP.md
+LOG.md
