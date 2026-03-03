@@ -27,7 +27,7 @@ export default function PressPage() {
       <Container className="min-h-screen px-4 pb-20 md:px-8 md:pt-20 md:pb-10">
         <Heading>Press</Heading>
         <Subheading className="max-w-2xl">
-          Publicly verifiable signals — every claim backed by a link.
+          A few highlights over the years. Okay, all of them.
         </Subheading>
 
         <SectionTitle>Awards & Recognition</SectionTitle>
