@@ -31,7 +31,7 @@ export const projects: Project[] = [
     problem:
       "Carbon footprinting was manual, inaccurate, and disconnected from daily life. Banking data is messy and hard to categorize. People wanted to act on climate but didn't know their personal impact — or how to reduce it.",
     solution:
-      "Built the entire platform from scratch — React Native mobile app, AWS backend, ML classification engine. Scaled from MVP to 31 countries with 2,500+ bank integrations in under 3 years. Then led the B2B pivot, architecting enterprise APIs that enabled partnerships with IBM and discussions with 27 banks.",
+      "Built the entire platform from scratch — React Native mobile app, AWS backend, ML classification engine. Scaled from MVP to 31 countries with 2,500+ bank integrations in under 3 years. Then led the B2B pivot, architecting enterprise APIs that enabled partnerships with IBM and technical evaluation and enterprise pilots with Lloyds, Mastercard, ANZ and others.",
     impact: [
       "Built iOS/Android app from scratch — 10,000+ users in first 3 months",
       "Featured as Apple App of the Day, TechCrunch (Mike Butcher), BBC",
