@@ -27,7 +27,7 @@ export const ProofStrip = () => {
           >
             <Image
               src={item.logo}
-              alt={item.name}
+              alt={`${item.name} logo`}
               width={100}
               height={32}
               className="h-6 w-auto rounded-lg ring-1 ring-neutral-200/50 transition-all duration-300 group-hover:ring-2 group-hover:ring-neutral-400/50 group-hover:shadow-lg dark:ring-neutral-700/50 dark:group-hover:ring-neutral-500/50 md:h-8"

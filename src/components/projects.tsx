@@ -37,7 +37,7 @@ export const Projects = ({
                 {project.image && (
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} project thumbnail`}
                     height={300}
                     width={300}
                     className="w-full rounded-xl object-cover transition duration-200 group-hover:scale-[1.02]"
@@ -70,7 +70,7 @@ export const Projects = ({
                 {project.image && (
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} project thumbnail`}
                     height={300}
                     width={300}
                     className="w-full rounded-xl object-cover transition duration-200 group-hover:scale-[1.02]"

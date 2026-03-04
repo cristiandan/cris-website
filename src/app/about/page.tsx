@@ -39,7 +39,7 @@ export default function AboutPage() {
             <div className="flex-shrink-0">
               <Image
                 src="/images/headshot.jpg"
-                alt="Cristian Dan"
+                alt="Cristian Dan — Fractional CTO and startup founder"
                 width={200}
                 height={200}
                 className="rounded-2xl ring-1 ring-neutral-200/50 shadow-lg dark:ring-neutral-700/50"

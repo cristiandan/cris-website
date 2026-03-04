@@ -104,7 +104,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
             >
               <Image
                 src={selectedImage}
-                alt={title}
+                alt={`${title} screenshot ${images.indexOf(selectedImage) + 1}`}
                 width={1200}
                 height={900}
                 className="max-h-[90vh] w-auto rounded-lg object-contain"

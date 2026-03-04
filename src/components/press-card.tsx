@@ -27,7 +27,7 @@ export const PressCard = ({
         <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center">
           <Image
             src={item.logo}
-            alt={item.name}
+            alt={`${item.name} logo`}
             width={48}
             height={48}
             className="h-10 w-10 rounded-lg object-contain ring-1 ring-neutral-200/50 transition-all duration-300 group-hover:ring-2 group-hover:ring-neutral-400/50 group-hover:shadow-lg dark:ring-neutral-700/50 dark:group-hover:ring-neutral-500/50"

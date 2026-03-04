@@ -52,7 +52,7 @@ export const Experiences = ({
               </div>
               <img
                 src={experience.logo}
-                alt={experience.company}
+                alt={`${experience.company} logo`}
                 width={100}
                 height={100}
                 className={cn(experience.imageClass, "hidden md:block")}
