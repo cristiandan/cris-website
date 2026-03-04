@@ -8,6 +8,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Work",
   description: "Projects and products I've built — Yayzy (carbon tracking fintech), Open Banking integrations, AI systems. CTO experience with distributed teams.",
+  alternates: {
+    canonical: "/work",
+  },
   openGraph: {
     title: "Work & Projects — Cristian Dan",
     description: "Projects and products I've built — Yayzy (carbon tracking fintech), Open Banking integrations, AI systems.",

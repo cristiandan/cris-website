@@ -7,6 +7,13 @@ import { WhatIDo } from "@/components/what-i-do";
 import { AudienceRoutes } from "@/components/audience-routes";
 import { siteConfig, hero } from "@/constants/site";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

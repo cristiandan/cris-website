@@ -9,6 +9,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Press",
   description: "Featured in TechCrunch, BBC, Forbes 30 Under 30, Business Insider, CNN, Apple App Store, and 50+ publications. Backed by Oxford, LBS, Antler, and IBM.",
+  alternates: {
+    canonical: "/press",
+  },
   openGraph: {
     title: "Press & Media — Cristian Dan",
     description: "Featured in TechCrunch, BBC, Forbes 30 Under 30, Business Insider, CNN, and 50+ publications.",
