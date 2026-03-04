@@ -14,7 +14,7 @@ export const experience: Experience[] = [
   {
     company: "Google",
     designation: "Senior Frontend Engineer",
-    logo: "/images/logos/google-logo.png",
+    logo: "/images/logos/google-logo.webp",
     description: "Led the development of key features for Google Cloud Platform's web console while improving performance metrics by 35%.",
     startDate: "June 2020",
     endDate: "Present",
@@ -24,7 +24,7 @@ export const experience: Experience[] = [
   {
     company: "Microsoft",
     designation: "Software Engineer",
-    logo: "/images/logos/microsoft-logo.png",
+    logo: "/images/logos/microsoft-logo.webp",
     description: "Worked on the Microsoft Teams web application, implementing real-time collaboration features and UI components.",
     startDate: "August 2018",
     endDate: "May 2020",
@@ -34,7 +34,7 @@ export const experience: Experience[] = [
   {
     company: "Airbnb",
     designation: "Frontend Developer",
-    logo: "/images/logos/airbnb-logo.png",
+    logo: "/images/logos/airbnb-logo.webp",
     description: "Developed and maintained core components of Airbnb's booking platform.",
     startDate: "January 2017",
     endDate: "July 2018",
@@ -44,7 +44,7 @@ export const experience: Experience[] = [
   {
     company: "Shopify",
     designation: "Freelance Web Developer",
-    logo: "/images/logos/shopify-logo.png",
+    logo: "/images/logos/shopify-logo.webp",
     description: "Designed and developed custom Shopify themes for enterprise clients with optimized checkout flows.",
     startDate: "March 2019",
     endDate: "December 2019",
@@ -55,7 +55,7 @@ export const experience: Experience[] = [
   {
     company: "Adobe",
     designation: "Freelance Frontend Consultant",
-    logo: "/images/logos/adobe-logo.png",
+    logo: "/images/logos/adobe-logo.webp",
     description: "Consulted on the redesign of Adobe's Creative Cloud web application.",
     startDate: "September 2016",
     endDate: "November 2016",

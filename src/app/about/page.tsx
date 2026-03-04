@@ -38,7 +38,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-start">
             <div className="flex-shrink-0">
               <Image
-                src="/images/headshot.jpg"
+                src="/images/headshot.webp"
                 alt="Cristian Dan — Fractional CTO and startup founder"
                 width={200}
                 height={200}
