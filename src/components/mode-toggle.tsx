@@ -46,6 +46,7 @@ export const ModeToggle = () => {
     <button
       className="flex items-center rounded-md px-2 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
       onClick={SWITCH}
+      aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
     >
       {theme === "light" ? (
         <motion.span

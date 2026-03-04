@@ -43,11 +43,13 @@ const MobileNavbar = ({
     <motion.nav className="fixed top-0 left-0 z-50 block w-full border-b border-neutral-100 bg-white md:hidden dark:border-neutral-800 dark:bg-neutral-900">
       <>
         <div className="flex w-full items-center justify-between px-4 py-3">
-          <Link href="/" className="font-semibold text-neutral-900 dark:text-white">
+          <Link href="/" className="font-semibold text-neutral-900 dark:text-white" aria-label="Cristian Dan — Home">
             CD
           </Link>
           <button
             onClick={toggleMenu}
+            aria-label="Open navigation menu"
+            aria-expanded={isOpen}
             className="flex h-10 w-10 items-center justify-center rounded-md text-neutral-700 dark:text-neutral-200"
           >
             <svg
@@ -57,6 +59,7 @@ const MobileNavbar = ({
               strokeWidth={1.5}
               stroke="currentColor"
               className="h-6 w-6"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -79,6 +82,7 @@ const MobileNavbar = ({
               <div className="flex w-full items-center justify-end p-4">
                 <button
                   onClick={toggleMenu}
+                  aria-label="Close navigation menu"
                   className="flex h-10 w-10 items-center justify-center rounded-md text-neutral-700 dark:text-neutral-200"
                 >
                   <svg
@@ -88,6 +92,7 @@ const MobileNavbar = ({
                     strokeWidth={1.5}
                     stroke="currentColor"
                     className="h-6 w-6"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -169,7 +174,7 @@ const DesktopNavbar = ({
         className="mx-auto flex max-w-4xl items-center justify-between rounded-full bg-white/50 px-3 py-2 backdrop-blur-sm dark:bg-neutral-900/50"
       >
         <motion.div whileHover="animate" initial="initial">
-          <Link href="/" className="font-bold text-neutral-900 dark:text-white px-2">
+          <Link href="/" className="font-bold text-neutral-900 dark:text-white px-2" aria-label="Cristian Dan — Home">
             CD
           </Link>
         </motion.div>
