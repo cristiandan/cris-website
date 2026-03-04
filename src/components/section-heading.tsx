@@ -12,7 +12,7 @@ export const SectionHeading = ({
   className?: string;
 }) => {
   return (
-    <h2
+    <p
       className={cn(
         "relative mt-4 w-fit max-w-lg text-sm font-normal text-neutral-800 md:text-base dark:text-neutral-300",
         className,
@@ -45,7 +45,7 @@ export const SectionHeading = ({
           {word}&nbsp;
         </motion.span>
       ))}
-    </h2>
+    </p>
   );
 };
 
