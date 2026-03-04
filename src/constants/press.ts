@@ -94,6 +94,7 @@ export const pressCoverage: PressItem[] = [
     href: "https://www.zf.ro/zf-it-generation/zf-it-generation-cristian-dan-cofondator-cto-yayzy-aplicatie-21795656",
     logo: logoUrl("zf.ro"),
   },
+  // #4 - G4Media (80) - Cristian Q&A interview
   {
     name: "G4Media",
     description: "\"Cristian Dan, tânăr antreprenor în top Forbes Under 30 Europa\" — interview",
