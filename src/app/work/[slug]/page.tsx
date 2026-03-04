@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
 import { ImageGallery } from "@/components/image-gallery";
+import { RelatedProjects } from "@/components/related-projects";
 import { projects } from "@/constants/projects";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -300,6 +301,9 @@ export default async function ProjectPage({ params }: Props) {
             )}
           </div>
         </div>
+
+        {/* Related Projects */}
+        <RelatedProjects currentSlug={slug} projects={projects} />
       </Container>
     </div>
   );
