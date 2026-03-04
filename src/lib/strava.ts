@@ -288,12 +288,10 @@ export const getStravaStats = unstable_cache(
     // Try API first
     const apiStats = await fetchStatsFromAPI();
     if (apiStats) {
-      console.log("Strava: Using API data");
       return apiStats;
     }
 
     // Fall back to public scraping
-    console.log("Strava: Falling back to public profile scraping");
     return fetchStatsFromPublic();
   },
   ["strava-stats-v2"],
@@ -309,7 +307,6 @@ export const getLatestRuns = unstable_cache(
     }
 
     // Fall back to public scraping
-    console.log("Strava: Falling back to public profile for runs");
     return fetchRunsFromPublic();
   },
   ["strava-runs-v2"],
