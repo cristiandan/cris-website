@@ -4,9 +4,6 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "aceternity.com",
-      },
-      {
         hostname: "img.logo.dev",
       },
     ],

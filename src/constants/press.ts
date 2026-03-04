@@ -34,7 +34,7 @@ export const awards: PressItem[] = [
   {
     name: "PwC Net Zero Future 50",
     description: "UK's most innovative climate startups — 2022",
-    href: "https://www.pwc.co.uk/issues/esg/net-zero-future-50.html",
+    href: "https://www.edie.net/pwc-reveals-50-uk-businesses-at-the-forefront-of-net-zero-innovation/",
     logo: logoUrl("pwc.com"),
   },
   {
@@ -94,13 +94,7 @@ export const pressCoverage: PressItem[] = [
     href: "https://www.zf.ro/zf-it-generation/zf-it-generation-cristian-dan-cofondator-cto-yayzy-aplicatie-21795656",
     logo: logoUrl("zf.ro"),
   },
-  // #4 - G4Media (80) - Cristian Q&A interview
-  {
-    name: "G4Media",
-    description: "\"Cristian Dan, tânăr antreprenor în Forbes Under 30\" — Q&A interview",
-    href: "https://www.g4media.ro/cristian-dan-tanar-antreprenor-in-top-forbes-under-30-europa",
-    logo: logoUrl("g4media.ro"),
-  },
+  // G4Media (80) - REMOVED: Article deleted (404), not archived. Forbes 30U30 coverage still via ZF, Forbes Romania.
   // #5 - Ziarul Financiar City365 (80) - "Dan Cristian" named first in photo, dedicated article
   {
     name: "Ziarul Financiar",
