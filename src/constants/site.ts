@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Cristian Dan",
-  title: "Cristian Dan — CTO & Technical Co-founder",
+  title: "Cristian Dan — Fractional CTO & Startup Technical Co-founder",
   description:
     "I build things from zero to paying customers, fast. Startups hire me to ship MVPs, scale infrastructure, or lead engineering teams.",
   url: "https://cris-website.netlify.app",

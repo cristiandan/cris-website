@@ -7,13 +7,13 @@ import { awards, pressCoverage, backedBy, reference } from "@/constants/press";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Press",
+  title: "Press — Forbes, TechCrunch & Apple Featured",
   description: "Featured in TechCrunch, BBC, Forbes 30 Under 30, Business Insider, CNN, Apple App Store, and 50+ publications. Backed by Oxford, LBS, Antler, and IBM.",
   alternates: {
     canonical: "/press",
   },
   openGraph: {
-    title: "Press & Media — Cristian Dan",
+    title: "Press Coverage — Forbes, TechCrunch & Apple Featured | Cristian Dan",
     description: "Featured in TechCrunch, BBC, Forbes 30 Under 30, Business Insider, CNN, and 50+ publications.",
   },
 };

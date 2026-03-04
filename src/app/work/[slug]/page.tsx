@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} — ${project.role}`,
+    title: `${project.title} Case Study — ${project.role}`,
     description: project.description,
     alternates: {
       canonical: `/work/${slug}`,
     },
     openGraph: {
-      title: `${project.title} — Cristian Dan`,
+      title: `${project.title} — ${project.role} | Cristian Dan`,
       description: project.description,
     },
   };

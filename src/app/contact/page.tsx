@@ -6,13 +6,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Hire Me — Fractional CTO & Technical Co-founder",
   description: "Get in touch with Cristian Dan — available for fintech projects, AI product engineering, and technical leadership roles.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact Cristian Dan",
+    title: "Hire Cristian Dan — Fractional CTO & Technical Co-founder",
     description: "Get in touch — available for fintech projects, AI product engineering, and technical leadership roles.",
   },
 };
