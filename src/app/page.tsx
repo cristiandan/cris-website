@@ -10,8 +10,15 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  description:
+    "Fractional CTO & startup technical co-founder. Forbes 30 Under 30, featured by Apple & TechCrunch. I ship MVPs, scale infrastructure, and lead engineering teams.",
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: "Cristian Dan — Fractional CTO & Startup Technical Co-founder",
+    description:
+      "Forbes 30 Under 30 fintech CTO. I build things from zero to paying customers, fast. Startups hire me to ship MVPs, scale infrastructure, or lead engineering teams.",
   },
 };
 
