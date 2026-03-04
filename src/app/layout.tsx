@@ -8,6 +8,7 @@ import { Toaster } from "sonner";
 import { ThemeProvider } from "next-themes";
 import { siteConfig } from "@/constants/site";
 import { StructuredData } from "@/components/structured-data";
+import { PostHogProvider } from "@/lib/posthog";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -75,16 +76,18 @@ export default function RootLayout({
           <StructuredData />
         </head>
         <body>
-          <ThemeProvider attribute="class">
-            <Toaster position="top-center" />
-            <main
-              className={`${inter.className} relative bg-neutral-100 antialiased [--pattern-fg:var(--color-neutral-950)]/5 dark:bg-neutral-950 dark:[--pattern-fg:var(--color-neutral-100)]/5`}
-            >
-              <Navbar />
-              {children}
-              <Footer />
-            </main>
-          </ThemeProvider>
+          <PostHogProvider>
+            <ThemeProvider attribute="class">
+              <Toaster position="top-center" />
+              <main
+                className={`${inter.className} relative bg-neutral-100 antialiased [--pattern-fg:var(--color-neutral-950)]/5 dark:bg-neutral-950 dark:[--pattern-fg:var(--color-neutral-100)]/5`}
+              >
+                <Navbar />
+                {children}
+                <Footer />
+              </main>
+            </ThemeProvider>
+          </PostHogProvider>
         </body>
       </html>
     </ViewTransitions>
