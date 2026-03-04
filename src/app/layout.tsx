@@ -7,6 +7,7 @@ import { Footer } from "@/components/navbar/footer";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "next-themes";
 import { siteConfig } from "@/constants/site";
+import { StructuredData } from "@/components/structured-data";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,6 +71,9 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          <StructuredData />
+        </head>
         <body>
           <ThemeProvider attribute="class">
             <Toaster position="top-center" />
