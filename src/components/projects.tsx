@@ -21,6 +21,7 @@ export const Projects = ({
           <motion.div
             initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
             whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            viewport={{ once: true }}
             whileHover={{
               boxShadow: "var(--shadow-aceternity)",
             }}
