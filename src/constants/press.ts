@@ -94,7 +94,12 @@ export const pressCoverage: PressItem[] = [
     href: "https://www.zf.ro/zf-it-generation/zf-it-generation-cristian-dan-cofondator-cto-yayzy-aplicatie-21795656",
     logo: logoUrl("zf.ro"),
   },
-  // G4Media (80) - REMOVED: Article deleted (404), not archived. Forbes 30U30 coverage still via ZF, Forbes Romania.
+  {
+    name: "G4Media",
+    description: "\"Cristian Dan, tânăr antreprenor în top Forbes Under 30 Europa\" — interview",
+    href: "https://www.g4media.ro/cristian-dan-tanar-antreprenor-in-top-forbes-under-30-europa-scolarizarea-in-strainatate-poate-oferi-oportunitati-valoroase-de-networking-dar-nu-consider-ca-e-un-factor-esential-pentru-a-d.html",
+    logo: logoUrl("g4media.ro"),
+  },
   // #5 - Ziarul Financiar City365 (80) - "Dan Cristian" named first in photo, dedicated article
   {
     name: "Ziarul Financiar",
