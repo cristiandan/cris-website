@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import useMeasure from "react-use-measure";
-import { Plus, Minus } from "lucide-react";
+import { IconPlus, IconMinus } from "@tabler/icons-react";
 
 interface ExpandableGridProps {
   children: React.ReactNode[];
@@ -51,9 +51,9 @@ export function ExpandableGrid({
             className="group flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-600 shadow-sm transition-all hover:border-neutral-300 hover:bg-neutral-50 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:border-neutral-600 dark:hover:bg-neutral-700 dark:hover:text-white"
           >
             {isExpanded ? (
-              <Minus className="h-4 w-4" />
+              <IconMinus className="h-4 w-4" />
             ) : (
-              <Plus className="h-4 w-4" />
+              <IconPlus className="h-4 w-4" />
             )}
             <span>
               {isExpanded ? "Show less" : `Show ${hiddenCount} more`}
